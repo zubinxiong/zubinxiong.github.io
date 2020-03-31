@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-31T13:59:25.818Z</updated>
+  <updated>2020-03-31T14:03:17.845Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2020/03/31/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E4%BB%BD%E6%8A%80%E6%9C%AF%E7%AE%80%E5%8E%86/"/>
     <id>http://yoursite.com/2020/03/31/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E4%BB%BD%E6%8A%80%E6%9C%AF%E7%AE%80%E5%8E%86/</id>
     <published>2020-03-31T13:26:30.000Z</published>
-    <updated>2020-03-31T13:59:25.818Z</updated>
+    <updated>2020-03-31T14:03:17.845Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,13 @@
       
         
         
-          &lt;h5 id=&quot;最近这段时间因为公司一直在招人，负责公司的一面，因此看了很多的简历，发现不会写简历的人真的特别的多。各种奇奇怪怪得问题都有。因此准备吐槽一下从一个开发的角度来看好的简历应该是怎么样的&quot;&gt;&lt;a
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;最近这段时间因为公司一直在招人，负责公司的一面，因此看了很多的简历，发现不会写简历的人真的特别的多。各种奇奇怪怪得问题都有。因此准备吐槽一下从一个开发的角度来看好的简历应该是怎么样的&lt;/p&gt;
+&lt;hr&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;简历中不要出
         
       
     
