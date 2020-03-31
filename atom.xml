@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>熊胖胖</title>
+  <icon>http://yoursite.com/icon.png</icon>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-03-31T13:59:25.818Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>熊</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何写一份技术简历</title>
+    <link href="http://yoursite.com/2020/03/31/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E4%BB%BD%E6%8A%80%E6%9C%AF%E7%AE%80%E5%8E%86/"/>
+    <id>http://yoursite.com/2020/03/31/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E4%BB%BD%E6%8A%80%E6%9C%AF%E7%AE%80%E5%8E%86/</id>
+    <published>2020-03-31T13:26:30.000Z</published>
+    <updated>2020-03-31T13:59:25.818Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;最近这段时间因为公司一直在招人，负责公司的一面，因此看了很多的简历，发现不会写简历的人真的特别的多。各种奇奇怪怪得问题都有。因此准备吐槽一下从一个开发的角度来看好的简历应该是怎么样的&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="其他" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="简历" scheme="http://yoursite.com/tags/%E7%AE%80%E5%8E%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>重新开始</title>
+    <link href="http://yoursite.com/2020/02/23/%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B/"/>
+    <id>http://yoursite.com/2020/02/23/%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B/</id>
+    <published>2020-02-23T04:41:10.000Z</published>
+    <updated>2020-03-31T12:53:33.744Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;算是重新开始写博客了吧，试过了自己搭服务器，用 typecho 搭一个简单的博客平台，但是都没有坚持下去，最后还是用回了 GitHub page ，毕竟内容才是最重要的。另外域名也换掉了，改成了 xiongzb.com
+        
+      
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="总结" scheme="http://yoursite.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android X 项目迁移</title>
+    <link href="http://yoursite.com/2020/02/23/%E9%A1%B9%E7%9B%AE%E8%BF%81%E7%A7%BB/"/>
+    <id>http://yoursite.com/2020/02/23/%E9%A1%B9%E7%9B%AE%E8%BF%81%E7%A7%BB/</id>
+    <published>2020-02-23T04:17:51.000Z</published>
+    <updated>2020-03-31T12:53:33.745Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;什么是-Android-X&quot;&gt;&lt;a href=&quot;#什么是-Android-X&quot; class=&quot;headerlink&quot; title=&quot;什么是 Android X&quot;&gt;&lt;/a&gt;什么是 Android X&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Android X 是 Google
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2016 总结</title>
+    <link href="http://yoursite.com/2017/01/01/2016%20%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2017/01/01/2016%20%E6%80%BB%E7%BB%93/</id>
+    <published>2016-12-31T16:00:00.000Z</published>
+    <updated>2020-03-31T12:53:33.736Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天是 2017.1.1 准备把之前开坑的 2016 年总结给填了。&lt;/p&gt;
+&lt;p&gt;2016 年总体是在不断变化的一年，又主动的有被动的，有好的有坏的。这一年虽然不算过的平静但是好歹也结束了。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="总结" scheme="http://yoursite.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OAuth2.0 简介</title>
+    <link href="http://yoursite.com/2016/10/24/oauth2.0%E7%AE%80%E4%BB%8B/"/>
+    <id>http://yoursite.com/2016/10/24/oauth2.0%E7%AE%80%E4%BB%8B/</id>
+    <published>2016-10-23T16:00:00.000Z</published>
+    <updated>2020-03-31T12:53:33.743Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;其实这篇文章是很早以前就记在为知笔记里面的，但是一直懒的重新整理，但是不久前有人在群里面问 oauth2.0 相关的问题，就想着整理一遍出来了，好了，下面开始写正文了要是发现有什么错误，欢迎在评论里面指出。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网络" scheme="http://yoursite.com/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="oauth2.0" scheme="http://yoursite.com/tags/oauth2-0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bgm38 踩坑备忘</title>
+    <link href="http://yoursite.com/2016/09/12/Bgm38%20%E8%B8%A9%E5%9D%91%E5%A4%87%E5%BF%98/"/>
+    <id>http://yoursite.com/2016/09/12/Bgm38%20%E8%B8%A9%E5%9D%91%E5%A4%87%E5%BF%98/</id>
+    <published>2016-09-11T16:00:00.000Z</published>
+    <updated>2020-03-31T12:53:33.739Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前在写 &lt;a href=&quot;http://ewriter.me/2016/08/18/bgm38/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Bgm38&lt;/a&gt; 的时候，遇到了不少的坑。之前也说过了最开始写的时候基本没考虑维护性就是想怎么写就怎么来，最近开始重构成目前流行的 MVP + RxJava + Retrofit 的形式，这篇文章主要就是记录下这个过程中遇到的一些问题作为备忘&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ViewPager 切换动画</title>
+    <link href="http://yoursite.com/2016/09/04/ViewPager%20%E5%88%87%E6%8D%A2%E5%8A%A8%E7%94%BB/"/>
+    <id>http://yoursite.com/2016/09/04/ViewPager%20%E5%88%87%E6%8D%A2%E5%8A%A8%E7%94%BB/</id>
+    <published>2016-09-03T16:00:00.000Z</published>
+    <updated>2020-03-31T12:53:33.741Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在 &lt;a href=&quot;http://gank.io&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Gank&lt;/a&gt; 上看到了 &lt;a href=&quot;https://github.com/rubensousa/ViewPagerCards&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ViewPagerCards&lt;/a&gt; 这个项目，觉得挺好看的，就看了下源码。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bgm38 Android 客户端</title>
+    <link href="http://yoursite.com/2016/08/18/bgm38/"/>
+    <id>http://yoursite.com/2016/08/18/bgm38/</id>
+    <published>2016-08-17T16:00:00.000Z</published>
+    <updated>2020-03-31T12:53:33.742Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Bgm38客户端&quot;&gt;&lt;a href=&quot;#Bgm38客户端&quot; class=&quot;headerlink&quot; title=&quot;Bgm38客户端&quot;&gt;&lt;/a&gt;Bgm38客户端&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;上周？上上周？反正是大概是这段时间，做了一个 &lt;a href=&quot;http://bangumi.tv&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;bangumi&lt;/a&gt; 的第三方 Android 客户端，其实之前也已经有一个客户端了。但是作者好像不做 Android 开发了，所以就自己重头做了一个&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;目前 App 已经在应用宝上线了，Google play 的话等我周末把信用卡给开通再来弄好了，地址的话稍后&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android SD 卡读写文件</title>
+    <link href="http://yoursite.com/2016/07/25/SD%E5%8D%A1%E8%AF%BB%E5%86%99/"/>
+    <id>http://yoursite.com/2016/07/25/SD%E5%8D%A1%E8%AF%BB%E5%86%99/</id>
+    <published>2016-07-24T16:00:00.000Z</published>
+    <updated>2020-03-31T12:53:33.741Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这片文章主要讲解的是 Android 上关于 SD 卡读写的东西，并没涉及到太底层的东西，只有一些坑而已。Android 上最开始是有 API 读取 SD 卡的，就是通过 &lt;strong&gt;Enviroment.getExternalStorageDirectory()&lt;/strong&gt; 这个方法获取的，但是后来三星学习苹果在手机内部焊死了一块存储，也就是我们现在通常所说的手机有 16g, 32g 这样的，我们用上面的这方法获得到的就是这个位置。但是手机厂商又把 SD 卡给加了回来，这篇文章讲的就是关于这个外置 SD 卡位置的读写问题。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 开发艺术探索2</title>
+    <link href="http://yoursite.com/2016/07/11/Android%E5%BC%80%E5%8F%91%E8%89%BA%E6%9C%AF%E6%8E%A2%E7%B4%A22/"/>
+    <id>http://yoursite.com/2016/07/11/Android%E5%BC%80%E5%8F%91%E8%89%BA%E6%9C%AF%E6%8E%A2%E7%B4%A22/</id>
+    <published>2016-07-10T16:00:00.000Z</published>
+    <updated>2020-03-31T12:53:33.737Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;IPC-机制&quot;&gt;&lt;a href=&quot;#IPC-机制&quot; class=&quot;headerlink&quot; title=&quot;IPC 机制&quot;&gt;&lt;/a&gt;IPC 机制&lt;/h3&gt;&lt;p&gt;2.1 Android IPC 简介&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IPC 是 Inter-Process Communication 的缩写，含义为进程间通信或者跨进程通信，是指两个进程之间进行数据交换的过程。&lt;/li&gt;
+&lt;li&gt;IPC 不是 Android 中所独有的，任何一个操作系统都需要有相应的IPC 机制，比如Windows 上可以通过剪贴板，管道和邮槽进行进程间通信，Linux 可以通过命名管道，共享内容，信号等来进行进程间通信。不同的操作系统有不同的方式实现。Android，它的进程间通信方式不能完全继承自Linux，在Android中最有特色的进程间通信方式就是&lt;strong&gt;Binder&lt;/strong&gt;，除此之外Android上还支持Socket，通过Socket 也可以实现任意两个终端之间的通信，当然同一个设备上的&lt;strong&gt;两个进程通过Socket 通信&lt;/strong&gt;自然也是可以的。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 开发艺术探索1</title>
+    <link href="http://yoursite.com/2016/07/04/Android%E5%BC%80%E5%8F%91%E8%89%BA%E6%9C%AF%E6%8E%A2%E7%B4%A21/"/>
+    <id>http://yoursite.com/2016/07/04/Android%E5%BC%80%E5%8F%91%E8%89%BA%E6%9C%AF%E6%8E%A2%E7%B4%A21/</id>
+    <published>2016-07-03T16:00:00.000Z</published>
+    <updated>2020-03-31T12:53:33.736Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Activity-的生命周期和启动模式&quot;&gt;&lt;a href=&quot;#Activity-的生命周期和启动模式&quot; class=&quot;headerlink&quot; title=&quot;Activity 的生命周期和启动模式&quot;&gt;&lt;/a&gt;Activity 的生命周期和启动模式&lt;/h3&gt;&lt;p&gt;1.1 Activity 的生命周期全面分析&lt;/p&gt;
+&lt;p&gt;Activity 的生命周期分为两部分内容，一部分是典型情况下的生命周期，另一部分是异常情况下的生命周期。&lt;strong&gt;典型情况指的是在有用户参与的情况下， Activity 所经过的声明周期的改变；异常情况指 Activity 被系统回收或者由于当前设备的 Configuration 发生改变从而导致 Activity 被销毁重建&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 异步消息处理解析</title>
+    <link href="http://yoursite.com/2016/06/13/Handler-Messager-Looper%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/"/>
+    <id>http://yoursite.com/2016/06/13/Handler-Messager-Looper%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</id>
+    <published>2016-06-12T16:00:00.000Z</published>
+    <updated>2020-03-31T12:53:33.740Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Handler 是 Android 上常用的异步消息处理机制，实际上 Handler 只是一个表象，背后的Looper , MessageQueue 才是重点，只是我们在使用的时候系统把这些给隐藏了，我们通常察觉不到而已。这次的源码解析是以support－v7-23.2.1 里面的为准，可能会与之前的源码或者之后的有些不同，但相信大体上是不会有很大变化的，可以参考我在代码上的注释一起看。具体看&lt;a href=&quot;https://github.com/zubinxiong/BlogDemo/tree/master/source/handler&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>更新博客主题及https</title>
+    <link href="http://yoursite.com/2016/06/07/%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
+    <id>http://yoursite.com/2016/06/07/%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/</id>
+    <published>2016-06-06T16:00:00.000Z</published>
+    <updated>2020-03-31T12:53:33.744Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;更新了博客的主题&quot;&gt;&lt;a href=&quot;#更新了博客的主题&quot; class=&quot;headerlink&quot; title=&quot;更新了博客的主题&quot;&gt;&lt;/a&gt;更新了博客的主题&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;修改了默认的模版，输出的时候增加下面的代码以支持 Android Chrome 39 之后的状态栏颜色变化。具体位置在hexo 主题下面，一般是layout里面的.jade 文件，这个很简单，在里面找一下就行了
+    
+    </summary>
+    
+    
+      <category term="其他" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 群英传读书笔记4</title>
+    <link href="http://yoursite.com/2016/06/03/Android%E7%BE%A4%E8%8B%B1%E4%BC%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B04/"/>
+    <id>http://yoursite.com/2016/06/03/Android%E7%BE%A4%E8%8B%B1%E4%BC%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B04/</id>
+    <published>2016-06-02T16:00:00.000Z</published>
+    <updated>2020-03-31T12:53:33.739Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;第八章&quot;&gt;&lt;a href=&quot;#第八章&quot; class=&quot;headerlink&quot; title=&quot;第八章&quot;&gt;&lt;/a&gt;第八章&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Android 的生命周期与工作模式：下面两张图介绍了Android的生命周期&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 群英传读书笔记3</title>
+    <link href="http://yoursite.com/2016/06/01/Android%E7%BE%A4%E8%8B%B1%E4%BC%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B03/"/>
+    <id>http://yoursite.com/2016/06/01/Android%E7%BE%A4%E8%8B%B1%E4%BC%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B03/</id>
+    <published>2016-05-31T16:00:00.000Z</published>
+    <updated>2020-03-31T12:53:33.738Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;第七章&quot;&gt;&lt;a href=&quot;#第七章&quot; class=&quot;headerlink&quot; title=&quot;第七章&quot;&gt;&lt;/a&gt;第七章&lt;/h3&gt;&lt;p&gt;﻿  1. 视图动画(View 动画)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Animation 框架定义了透明度AlphaAnimation， 旋转RotateAnimation， 缩放ScaleAnimation和位移TranslateAnimation几种常见的动画。&lt;/li&gt;
+&lt;li&gt;控制的是整个View， 实现原理是每次绘制视图时View所在的ViewGroup中的drawChild方法获取该View的Animation的Transformation值，然后调用canvas.concat(transformationToApply.getMatrix())，通过矩阵运算完成动画帧。如果动画没有完成，就继续调用invalidate方法，启动下次绘制来驱动动画，从而完成整个动画的绘制。&lt;/li&gt;
+&lt;li&gt;视图动画的问题在于当View 发生变化后，响应时间还停留在之前的位置&lt;/li&gt;
+&lt;li&gt;AnimationSet 动画集合&lt;/li&gt;
+&lt;li&gt;AnimationListener 设置动画的监听回调方法&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 群英传读书笔记2</title>
+    <link href="http://yoursite.com/2016/05/31/Android%E7%BE%A4%E8%8B%B1%E4%BC%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02/"/>
+    <id>http://yoursite.com/2016/05/31/Android%E7%BE%A4%E8%8B%B1%E4%BC%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02/</id>
+    <published>2016-05-30T16:00:00.000Z</published>
+    <updated>2020-03-31T12:53:33.738Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;第五章&quot;&gt;&lt;a href=&quot;#第五章&quot; class=&quot;headerlink&quot; title=&quot;第五章&quot;&gt;&lt;/a&gt;第五章&lt;/h3&gt;&lt;p&gt;﻿1. Android 上的几种坐标&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Android 坐标系&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在Android中，将屏幕左上角的顶点为坐标系原点。&lt;br&gt;系统提供了getLocationOnScreen(int location[]) 这样的方法获取Android坐标系中点的位置。另外在触摸事件中使用getRawX(). getRawY() 方法获得的坐标同样是Android坐标系中的坐标&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 群英传读书笔记1</title>
+    <link href="http://yoursite.com/2016/05/28/Android%E7%BE%A4%E8%8B%B1%E4%BC%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/"/>
+    <id>http://yoursite.com/2016/05/28/Android%E7%BE%A4%E8%8B%B1%E4%BC%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/</id>
+    <published>2016-05-27T16:00:00.000Z</published>
+    <updated>2020-03-31T12:53:33.737Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在重看Android 群英传，发现第一遍看下来还有挺多没消化的，第二遍干脆就把这些记下来发到博客上备忘好了&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;###第一章&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;介绍了Android 的体系架构及四大组件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Android 系统源码目录&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;一个查看Android 源码的&lt;a href=&quot;http://androidxref.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;网站&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;整个结构关系图(Makefile,bionic,bootable….. vendor等)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;/system/lib/ 存放几乎所有的共享库(.so)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;/system/usr/ 保存用户的配置文件,如键盘布局,共享,时区文件等&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;/data/misc/    保存了大部分的Wi-Fi,VPN信息:&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>uiautomator测试入门</title>
+    <link href="http://yoursite.com/2015/11/10/uiautomator%E6%B5%8B%E8%AF%95%E5%85%A5%E9%97%A8/"/>
+    <id>http://yoursite.com/2015/11/10/uiautomator%E6%B5%8B%E8%AF%95%E5%85%A5%E9%97%A8/</id>
+    <published>2015-11-09T16:00:00.000Z</published>
+    <updated>2020-03-31T12:53:33.744Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之所以要去了解这测试工具是因为公司没有专门的测试人员，于是测试工作也得自己上了。画了半天的时间了解了下基本的操作，但是因为是第一次接触这个东西，只涉及了一些基本的东西，文章中难免有错，望谅解，接下来就开始介绍吧。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Uiautomator简介&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;http://developer.android.com/tools/testing-support-library/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官网链接&lt;/a&gt;，更具体的内容就不做更多的介绍了。稍微概一下，Uiautomator是为了方便测试而引进的一个测试工具。可以在手机上模拟常用操作，比如说点击home键，返回键，点击view上某个特定的button，textview等。通过这一些列的方法测试能否正常运行。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="uiautomator" scheme="http://yoursite.com/tags/uiautomator/"/>
+    
+      <category term="测试" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>联想newifi mini刷Pandorabox及SS相关配置</title>
+    <link href="http://yoursite.com/2015/10/26/%E8%81%94%E6%83%B3newifi%20mini%E5%88%B7Pandorabox%E5%8F%8ASS%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2015/10/26/%E8%81%94%E6%83%B3newifi%20mini%E5%88%B7Pandorabox%E5%8F%8ASS%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/</id>
+    <published>2015-10-25T16:00:00.000Z</published>
+    <updated>2020-03-31T12:53:33.744Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  因为最近手机从越狱状态升级到了 iOS9 ，手机上就没办法用ss了，其实之前手机上因为用不了chacha20的加密就几乎全部转向Android手机了，于是就想着直接从路由下手好了，这样手机就不用再设置些其他的东西了。&lt;br&gt;  关于路由器的挑选，因为自己的要求并不高，能够刷openwrt的系统就可以了，所以就买了联想的这个newifi mini，某东价格99。吐槽一下其实本来想买小米的路由器的，但是翔米的期货一直买不到，就转向了上面那个和小米配置几乎一样的路由器。好了下面开始具体的操作了。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="其他" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="openwrt" scheme="http://yoursite.com/tags/openwrt/"/>
+    
+      <category term="Pandorabox" scheme="http://yoursite.com/tags/Pandorabox/"/>
+    
+      <category term="shadowsocks" scheme="http://yoursite.com/tags/shadowsocks/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 Material Design Support Library的侧滑抽屉教程</title>
+    <link href="http://yoursite.com/2015/08/12/NavigationView/"/>
+    <id>http://yoursite.com/2015/08/12/NavigationView/</id>
+    <published>2015-08-11T16:00:00.000Z</published>
+    <updated>2020-03-31T12:53:33.740Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Navigation-View-Material-Design-Support-Library-Tutorial&quot;&gt;&lt;a href=&quot;#Navigation-View-Material-Design-Support-Library-Tutorial&quot; class=&quot;headerlink&quot; title=&quot;Navigation View - Material Design Support Library Tutorial&quot;&gt;&lt;/a&gt;Navigation View - Material Design Support Library Tutorial&lt;/h3&gt;&lt;p&gt;&lt;em&gt;原文&lt;a href=&quot;http://www.android4devs.com/2015/06/navigation-view-material-design-support.html?showComment=1433727371964#c1932522776365289504&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;地址&lt;/a&gt;（需自备梯子）&lt;/em&gt;&lt;br&gt;&lt;em&gt;原作者: Akash bangad&lt;/em&gt;&lt;br&gt;&lt;em&gt;译者: ZubinXiong&lt;/em&gt;&lt;br&gt;&lt;br&gt;&lt;em&gt;注：本文的翻译已获得原作者许可，转载此文章请附上原文链接以及此文链接。因个人翻译水平有限，难免文中有少许错误，请各位批评指教&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Google几天前在2015年的Google IO大会上发布了新的Material Design Support Library(Material Design 支持库)，今天我们将看一看支持库中的一个组件即Navigation View(抽屉组件)，有了这个新组件，想要制作一个符合Material Design的漂亮的抽屉导航将非常容易，在这个支持库出来之前我已经展示过如何制作Navigation drawer，这项工作非常烦人，但是如果使用今天这个Support Library一切都变的非常容易。所以让我们开始吧。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+      <category term="Material Design" scheme="http://yoursite.com/tags/Material-Design/"/>
+    
+      <category term="翻译" scheme="http://yoursite.com/tags/%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+</feed>

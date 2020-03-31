@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="description" content="">
+  <meta name="author" content="熊">
+  <meta name="keywords" content="">
+  <title>Android 群英传读书笔记1 ~ 熊胖胖</title>
+
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
+<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
+<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
+<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+
+
+
+  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
+
+<link rel="stylesheet" href="/css/main.css"  >
+
+
+  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="熊胖胖" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 50vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>熊胖胖的博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">首页</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">归档</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">分类</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">标签</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">关于</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/atom.xml">RSS</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" false
+         style="background: url('/img/index.jpg')no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  星期六, 五月 28日 2016
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    998 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      3 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <p>最近在重看Android 群英传，发现第一遍看下来还有挺多没消化的，第二遍干脆就把这些记下来发到博客上备忘好了</p>
+<hr>
+<p>###第一章</p>
+<ul>
+<li><p>介绍了Android 的体系架构及四大组件</p>
+</li>
+<li><p>Android 系统源码目录</p>
+<ul>
+<li><p>一个查看Android 源码的<a href="http://androidxref.com" target="_blank" rel="noopener">网站</a></p>
+</li>
+<li><p>整个结构关系图(Makefile,bionic,bootable….. vendor等)</p>
+</li>
+<li><p>/system/lib/ 存放几乎所有的共享库(.so)</p>
+</li>
+<li><p>/system/usr/ 保存用户的配置文件,如键盘布局,共享,时区文件等</p>
+</li>
+<li><p>/data/misc/    保存了大部分的Wi-Fi,VPN信息:</p>
+<a id="more"></a>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h3><ul>
+<li>Android Studio的使用,这部分用的比较多,大部分操作都比较熟悉就不做过多的笔记了</li>
+<li>adb的常用命令<ul>
+<li>adb shell //进入了类似linux命令环境下</li>
+<li>pm list packages -f 列出所有的package</li>
+<li>adb shell am start -n 包名／包类 ＋ 类名 启动一个activity </li>
+</ul>
+</li>
+</ul>
+<h3 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h3><p>1.1  View 的测量,这个过程是在onmeasure()方法中进行<br>系统提供了一个MeasureSpec类. MeasureSpec 是一个32位int值. 其中高2位是测量的模式,低30位是测量的大小. </p>
+<ul>
+<li><p>EXACTLY<br>  精确模式,比如指定具体数值或者指定为match_parent 的时候</p>
+</li>
+<li><p>AT_MOST<br>即最大值模式,layout_width,layout_height 指定为wrap_content的时候</p>
+</li>
+<li><p>UNSPECIFIED<br>不指定大小测量模式,View 想多大就多大,通常情况下在绘制自定义 View 的时候才会使用</p>
+</li>
+</ul>
+<hr>
+<p>View 类默认的 onMeasure() 方法只支持EXACTLY 模式,如果不重写 onMeasure 方法的话就只能用match_parent 或者指定的大小. 如果要支持wrap_content 的使用,就必须重写onMeasure方法. </p>
+<p>1.2 View 的绘制<br>测量好一个 View 之后,就可以简单地重写onDraw() 方法,并在Canvas对象上来绘制所需要的图形<br>一般情况下可以重写 View 类中的onDraw 方法,,onDraw 中有一个参数,就是Canvas 对象.</p>
+<hr>
+<p>2.1 ViewGroup 的测量<br>ViewGroup 在测量时通过遍历所以子View,从而调用子View的Measure 方法,获得每一个子View的测量结果,前面所说的对View 的测量,就是在这里进行的.<br>当子View测量完毕后,就要将子View 放到合适的地方,这个过程就是View 的Layout 过程.<br>在自定义ViewGroup时,通常会去重写onLayout方法来控制其子View显示位置的逻辑. 同样,如果需要支持wrap_content属性,那么它还需要重写onMeasure方法. 这点与View是相同的. </p>
+<p>2.2 ViewGroup 的绘制<br>ViewGroup 通常情况不需要绘制,如果不是指定了ViewGroup的背景色,那么ViewGroup的onDraw()方法都不会被调用. 但是ViewGroup会使用dispatchDraw()方法绘制子View</p>
+<hr>
+<p>自定义View时:<br>通常会去重写onDraw 方法来绘制View 的显示内容. 如果还需要使用<br>wrap_content 属性,还需要重写onMeasure 方法. 自定义View 中还有一些比较重要的回调方法. </p>
+<ul>
+<li>onFinishInflate() 从XML 加载组件后回调</li>
+<li>onSizeChanged 组件大小改变时回调</li>
+<li>onMeasure 回调改方法来进行测量</li>
+<li>onLayout 回调该方法来确定显示的位置</li>
+<li>onTouchEvent 监听到触摸事件时回调</li>
+</ul>
+<hr>
+<p>2.3 事件传递</p>
+<ul>
+<li>ViewGroup (dispatchTouchEvent, onInterceptTouchEvent)比View(dispatchTouchEvent) 的传递多了一个onInterceptTouchEvent方法</li>
+<li>View 和ViewGroup 事件的消费是一致的都是在onTouchEvent中</li>
+<li>事件的传递是从上到下的在这个例子重视 MyViewGroupA - MyViewGroupB - MyView(返回true, 拦截了, 返回false,不拦截 继续)</li>
+<li>事件的处理是传递到底部返回到顶部: MyView - MyGroupB - MyGroupA (true,处理了, false , 没处理)</li>
+</ul>
+<p>具体可以看我在github上传的代码,里面有详细的注释</p>
+<hr>
+<h3 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h3><ol>
+<li><p>使用ViewHolder 优化</p>
+</li>
+<li><p>设置listview显示在第几个item,listview.setSelection(N),这个方法和scrollTo一样是瞬时的,如果要平滑移动,用下面的方法</p>
+<pre><code class="Java">mListView.smoothScrollBy(distance, duration);
+mListView.smoothScrollByOffset(offset);
+mListView.smoothScrollToPosition(index);</code></pre>
+</li>
+<li><p>ListView 的滑动监听</p>
+<ul>
+<li><p>ontouchelistener</p>
+</li>
+<li><p>onScrollListener</p>
+<pre><code class="Java">SCROLL_STATE_FLING // 手指抛动时,惯性滑动的状态
+SCROLL_STATE_IDLE // 停止滑动
+SCROLL_STATE_TOUCH_SCROLL // 正在滑动
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><a href="https://github.com/zubinxiong/AndroidHeroDemo" target="_blank" rel="noopener">GithubDemo地址</a></p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+              <span>
+                <i class="iconfont icon-inbox"></i>
+                
+                  <a class="hover-with-bg" href="/categories/Android">Android</a>
+                  &nbsp;
+                
+              </span>&nbsp;&nbsp;
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/Android">Android</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+      <br><br>
+      
+      
+  <script defer src="https://utteranc.es/client.js"
+          repo="zubinxiong/zubinxiong.github.io"
+          issue-term="pathname"
+  
+          label="comments"
+    
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script>
+
+
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+
+    
+  
+    <!-- 不蒜子统计PV -->
+    
+    &nbsp;<span id="busuanzi_container_site_pv"></span>总访问量 
+          <span id="busuanzi_value_site_pv"></span> 次&nbsp;
+  
+  
+    <!-- 不蒜子统计UV -->
+    
+    &nbsp;<span id="busuanzi_container_site_uv"></span>总访客数 
+            <span id="busuanzi_value_site_uv"></span> 人&nbsp;
+  
+  <br>
+
+
+
+    
+
+
+    <!-- cnzz Analytics icon -->
+    
+
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+
+  <script src="/js/lazyload.js" ></script>
+
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+
+  <script src="/lib/smoothscroll/SmoothScroll.min.js" ></script>
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+<!-- Plugins -->
+
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint  linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Android 群英传读书笔记1&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script>
+    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+      function () {
+        var element = document.createElement("a");
+        $(element).attr("data-fancybox", "images");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="description" content="">
+  <meta name="author" content="熊">
+  <meta name="keywords" content="">
+  <title>Android 开发艺术探索2 ~ 熊胖胖</title>
+
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
+<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
+<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
+<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+
+
+
+  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
+
+<link rel="stylesheet" href="/css/main.css"  >
+
+
+  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="熊胖胖" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 50vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>熊胖胖的博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">首页</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">归档</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">分类</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">标签</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">关于</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/atom.xml">RSS</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" false
+         style="background: url('/img/index.jpg')no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  星期一, 七月 11日 2016
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    5.7k 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      21 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h3 id="IPC-机制"><a href="#IPC-机制" class="headerlink" title="IPC 机制"></a>IPC 机制</h3><p>2.1 Android IPC 简介</p>
+<ul>
+<li>IPC 是 Inter-Process Communication 的缩写，含义为进程间通信或者跨进程通信，是指两个进程之间进行数据交换的过程。</li>
+<li>IPC 不是 Android 中所独有的，任何一个操作系统都需要有相应的IPC 机制，比如Windows 上可以通过剪贴板，管道和邮槽进行进程间通信，Linux 可以通过命名管道，共享内容，信号等来进行进程间通信。不同的操作系统有不同的方式实现。Android，它的进程间通信方式不能完全继承自Linux，在Android中最有特色的进程间通信方式就是<strong>Binder</strong>，除此之外Android上还支持Socket，通过Socket 也可以实现任意两个终端之间的通信，当然同一个设备上的<strong>两个进程通过Socket 通信</strong>自然也是可以的。</li>
+</ul>
+<a id="more"></a>
+
+<hr>
+<p>2.2 Android 中的多进程模式</p>
+<p>2.2.1 开启多进程模式</p>
+<ul>
+<li>在Android中使用多进程只有一种方法，那就是给四大组件（Activity，Service，Receiver，ContentProvider） 在AndroidMenifest 中指定<strong>android:process</strong> 属性。其实还有另一种<strong>非常规手段</strong>，通过JNI 在 native 层去fork 一个新的进程。</li>
+</ul>
+<pre><code class="xml">// 默认包名是me.ewriter
+android:process=&quot;me.ewriter.test&quot;
+android:process=&quot;:test&quot;</code></pre>
+<ul>
+<li><p>上面的代码中，有两种形式。带上<strong>:</strong> 的表示进程属于当前应用的私有进程，其他应用组件不可以和它跑在同一个进程。而进程名不以<strong>：</strong>开头的进程属于全局进程，其他应用通过ShareUID 的方式可以和它跑在同一个进程。上面的例子，我们的默认包名是me.ewriter。那么默认就会有<strong>me.ewriter</strong>，<strong>me.ewriter.test</strong>，<strong>me.ewriter:test</strong>三个进程</p>
+</li>
+<li><p>Android系统会为每一个应用分配唯一的UID，<strong>具有相同UID的应用才能共享数据</strong>。这里需要说明，两个应用通过ShareUID 跑在同一个进程中是有要求的，需要这两个应用有相同的ShareUID 并且签名相同才可以。在这种情况下，它们可以互相访问对方的私有数据，比如data目录等</p>
+</li>
+</ul>
+<p>2.2.2 多进程模式的运行机制</p>
+<ul>
+<li>Android 为每个应用分配了一个独立的虚拟机，或者说为每个进程都分配了一个独立虚拟机，不同的虚拟机在内存分配上有不同的地址空间，这就导致了不同的虚拟机中访问同一个类的对象会产生多分副本。在书上的例子中就是me.ewriter.art_chapter2 和 me.ewriter.art_chapter2:remote 中都存在一个UserManager 类，并且这两个类是互不干扰的。</li>
+</ul>
+<p><img src="http://7xjkin.com1.z0.glb.clouddn.com/7.11.1.png" srcset="/img/loading.gif" alt=""></p>
+<ul>
+<li><p>所有运行在不同进程的四大组件，只要它们之间需要通过内存共享数据，都会共享失败。这也是多进程所带来的主要影响。一般会造成下面几个方面的问题</p>
+<ul>
+<li>静态成员和单例模式完全失效</li>
+<li>线程同步机制完全失效</li>
+<li>SharePreferences 的可靠性下降</li>
+<li>Application 会多次创建</li>
+</ul>
+</li>
+<li><p>第一个问题例子中已经说明；第二个问题类似，由于不是一块内存了，那么不管是锁对象还是锁全局类都无法保证线程同步；第三个问题是因为SharePreference 不支持两个进程同时去执行写操作，否则会导致一定几率的数据丢失，这是因为SharePrefences 底层是通过读写xml 文件来实现的；第四个问题当一个组件跑在一个新的进程中事，由于系统在创建新的进程的同时分配独立的虚拟机，所以这个过程其实就是启动一个应用的过程。</p>
+</li>
+</ul>
+<hr>
+<p>2.3 IPC 基础概念介绍</p>
+<ul>
+<li>Serializable 和 Parcelable 接口可以完成对象的序列化过程，当我们需要通过Intent 和 Binder 传输数据时就需要使用Parcelable 或者Serializable。</li>
+</ul>
+<p>2.3.1 Serializable 接口</p>
+<ul>
+<li>Serializable 是Java 所提供的一个序列化接口，它是一个空接口，为对象提供标准的序列化和反序列化操作。想让一个对象实现序列化只要让这个类实现Serializable 接口并声明serialVersionUID即可，实际上serialVersionUID也不是必须的，但是这会影响到反序列化。AS 中需要做下面设置</li>
+</ul>
+<p><img src="http://7xjkin.com1.z0.glb.clouddn.com/7.11.2.jpg" srcset="/img/loading.gif" alt=""></p>
+<ul>
+<li>如何对对象序列化也很简单，参考下面的代码</li>
+</ul>
+<pre><code class="Java">// 序列化过程
+User user = new User(0 ， “jake&quot;, true);
+ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(”cache.txt&quot;));
+out.writeObject(user);
+out.close();
+
+// 反序列化过程
+ObjectInputStream in = new ObjectInputStream(new FileInputStream(&quot;cache.txt&quot;));
+User newUser = (User) in.readObject();
+in.close();</code></pre>
+<ul>
+<li><p>序列化的时候系统会把当前类的serialVersionUID 写入序列化文件中（也可能是其他媒介），当反序列化的时候系统回去检查文件中的 serialVersionUID ，看它是否和当前类的 serialVersionUID 是否一致。如果相同则可以反序列化，如果不同则说明当前类和序列化的类相比发生了某些变化，<strong>比如成员变量的数量，类型可能发生了变化</strong> ，这个时候是无法正常反序列化的。</p>
+</li>
+<li><p><strong>静态成员变量属于类，不属于对象，所以不会参与序列化过程</strong>；其次<strong>transient</strong>关键字标记的成员变量不参与序列化过程。</p>
+</li>
+</ul>
+<p>2.3.2 Parcelable 接口</p>
+<p>下面是一个实现Parceable 的实例</p>
+<pre><code class="Java">  protected User(Parcel in) {
+        userId = in.readInt();
+        userName = in.readString();
+        isMale = in.readByte() != 0;
+        book = in.readParcelable(Thread.currentThread().getContextClassLoader());
+    }
+
+    public static final Creator&lt;User&gt; CREATOR = new Creator&lt;User&gt;() {
+        @Override
+        public User createFromParcel(Parcel in) {
+            return new User(in);
+        }
+
+        @Override
+        public User[] newArray(int size) {
+            return new User[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(userId);
+        dest.writeString(userName);
+        dest.writeByte((byte) (isMale ? 1 : 0));
+        dest.writeParcelable(book, 0);
+    }</code></pre>
+<ul>
+<li><p>先介绍下<strong>Parcel</strong>，Parcel内部包装了可序列话的数据，可以在Binder 中传输。序列化功能由<strong>writeToParcel</strong> 方法来完成，最终是通过Parcel 中的一系列write方法来完成的；反序列化由<strong>CRATOR</strong> 来完成，其内部表明了如何创建序列化对象和数组，并通过Parcel 的一系列read方法来完成反序列化过程；describeContents 方法表示内容描述，几乎所有情况都返回0，仅当当前对象中存在文件描述时返回1；</p>
+</li>
+<li><p>注意在User(Parcel in) 方法中，由于book 是另一个可序列化对象，所以它的反序列化需要传递当前线程的上下文加载器，否则会找不到类，详细的方法说明见下表：</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>功能</th>
+<th>标记位</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>createFromParcel(Parcel in)</td>
+<td>从序列化后的对象中创建原始对象</td>
+<td></td>
+</tr>
+<tr>
+<td>newArray(int size)</td>
+<td>创建指定长度的原始对象数组</td>
+<td></td>
+</tr>
+<tr>
+<td>User(Parcel in)</td>
+<td>从序列化后的对象中创建原始对象</td>
+<td></td>
+</tr>
+<tr>
+<td>writeToParcel(Parcel dest, int flags)</td>
+<td>将当前对象写入序列化结构中，其中flags 标识有两种值：0或者1。为1时标识当前对象需要作为返回值返回，不能立即释放资源，自护所有情况都为0</td>
+<td>PARCELABLE_WRITE_RETURN_VALUE</td>
+</tr>
+<tr>
+<td>describeContents</td>
+<td>返回当前对象的内容描述，如果含有文件描述符，返回1，否则返回0，几乎所有情况都返回0</td>
+<td>CONTENTS_FILE_DESCRIPTOR</td>
+</tr>
+</tbody></table>
+<ul>
+<li>像Intent， Bundle，Bitmap 等都是系统实现了Parcelable 接口的类。Serializable 是Java 的序列化接口，序列化和反序列化需要大量的I/O操作。Parcelable 主要用在内存序列化上。</li>
+</ul>
+<p>2.3.3 Binder</p>
+<ul>
+<li><p>Binder比较复杂，本节的侧重点是介绍Binder的使用以及上层原理：直观来说，<strong>Binder 是 Android 中的一个类，它实现了IBinder 接口</strong>；从IPC 角度来看，Binder 是 Android 中的一种跨进程通信方式，Binder 还可以理解为一种虚拟的物理设备，它的驱动是/dev/binder， 该通信方式在Linux 中没有；从Android Framework 角度来说，Binder 是 ServiceManager 连接各种 Manager（ActivityManager， WindowManager 等等） 和相应ManagerService 的桥梁；从Android 应用层看，Binder 是客户端和服务器端进行通信的媒介，当bindService 的时候，服务端会返回一个包含业务端调用的Binder 对象。通过这个Binder 对象，客户端就可以获取服务端提供的数据或服务，这里的服务包括普通服务和基于AIDL 的服务。</p>
+</li>
+<li><p>Android 开发中，Binder 主要用在Service 中，包括AIDL 和 Message ，其中普通Service 中的Binder 不涉及进程间通信，比较简单，无法触及Binder 的核心。而Messenger 的底层其实是AIDL ，所以这里选择用AIDL 来分析Binder 的工作机制</p>
+</li>
+<li><p>根据书中的例子创建了Book 及 IBookManager 的aidl 文件后，rebuild，如果创建正确，那么会在build 下面生成IBookManager.java 的文件，我们把它拷贝出来（附件中），看下里面的代码。</p>
+</li>
+<li><p>可以看到它<strong>继承了android.os.IInterface</strong>，同时它<strong>自己也还是一个接口</strong>，所有可以在Binder 中传输的接口都需要集成IInterface 接口。看下类中，它申明了两个方法，getBookList 和 addBook，这是我们在aidl文件中声明的方法，同时它还<strong>申明了两个整形id标识</strong>这两个方法，这两个id标识在transcat 过程中客户端所请求的到底是哪个方法。接着声明了一个<strong>内部类Stub</strong>。这个<strong>Stub 就是一个Binder 类（extends android.os.IInterface）</strong>，当客户端和服务端都位于同一个进程时，方法调用不会走跨进程transact 过程。当处于不同进程，方法调用走transact 过程，这个过程由<strong>Stub 的内部代理类Proxy 完成</strong>。 这个接口的*<em>核心实现就是它的内部类Stub 和 Stub 的内部代理类Proxy *</em>；</p>
+</li>
+<li><p>关于Stub 和 Proxy 中的方法可以看附件中文件的注释</p>
+</li>
+<li><p>DESCRIPTOR: Binder 的唯一标识，一般用当前Binder 的类名表示</p>
+</li>
+<li><p>asInterface(android.os.IBinder obj) ：用于<strong>将服务端的Binder 对象转换成客户端所需要的AIDL 接口类型</strong>的对象，这种转换过程是<strong>区分进程</strong>的，如果客户端和服务端位于同一进程，那么此方法返回的就是服务端的Stub对象本身，否则返回的是系统封装后的Stub.proxy 对象</p>
+</li>
+<li><p>asBinder() ： 返回当前Binder 对象</p>
+</li>
+<li><p>onTransact(int code, android.os.Parcel data, android.os.Parcel reply, int flags)</p>
+<ul>
+<li>这个方法<strong>运行在服务端的Binder 线程池</strong>中，当客户发起跨进程请求时，远程请求会通过系统底层封装后交由此方法处理。 1.服务端通过code 确定客户端请求的目标方法是什么，接着从data 中取出目标方法所需要的 参数，然后执行目标方法 2.当目标方法执行完后，就像reply中写入返回值(如果存在)。如果返回false，那么客户端的请求会失败，我们可以用这个特性做权限验证，避免任何一个 进程调用我们的服务</li>
+</ul>
+</li>
+<li><p>Proxy#[方法]： <strong>代理类中的接口方法，这些方法运行在客户端</strong>。当客户端远程调用此方法时，它的内部实现是：首先创建该方法所需要的参数，然后把方法的参数信息写入到_data中，接着调用transact方法来发起RPC请求，同时当前线程挂起；然后服务端的onTransact方法会被调用，直到RPC过程返回后，当前线程继续执行，并从_reply中取出RPC过程的返回结果，最后返回_reply中的数据。</p>
+</li>
+</ul>
+<p>通过上面的分析，大致了解了 Binder 的工作机制，但还是有两点需要额外说明一下：当客户端发起远程请求时，由于当前线程会被挂起直至服务端进程返回数据，因此如果一个远程方法很耗时的话是不能放在 UI 线程中请求的；其次，由于服务端的 Binder 方法运行在 Binder 的线程池中，所以 Binder 方法不管是否耗时都应该采用同步的方式去实现，因为它已经运行在一个线程中了。下面这个图说明了 Binder 的工作机制</p>
+<p><img src="http://7xjkin.com1.z0.glb.clouddn.com/7.11.3.jpg" srcset="/img/loading.gif" alt=""></p>
+<ul>
+<li><p>从上面的分析来看，我们完全可以不提供AIDL 文件 即可实现Binder ，之所以提供AIDL 文件，是为了方便系统帮我们生成代码。系统生成的那个类主要由两部分组成，它本身是Binder 的接口（继承IInterface），其次它的内部有一个Stub 类，继承自Binder。</p>
+</li>
+<li><p>Binder 的两个很重要的方法 <strong>linkToDeath</strong>  和 <strong>unLinkToDeath</strong>。Binder 运行在服务端进程，如果服务端进程由于某种原因异常终止，这时我们到服务端的Binder断裂（称为Binder 死亡），会导致我们的调用失败。</p>
+</li>
+</ul>
+<pre><code class="Java">private IBinder.DeathRecipient mDeathRecipient = new IBinder.DeathRecipient() {
+    @Override
+    public void binderDied() {
+        Log.d(TAG, &quot;binder died. tname:&quot; + Thread.currentThread().getName());
+        if (mRemoteBookManager == null)
+           return;
+        mRemoteBookManager.asBinder().unlinkToDeath(mDeathRecipient, 0);
+        mRemoteBookManager = null;
+        // TODO:这里重新绑定远程Service
+    }
+};</code></pre>
+<hr>
+<p>2.4 Android 中的IPC 方式</p>
+<p>2.4.1 使用Bundle</p>
+<ul>
+<li>Bundle 实现了 Parcelable 接口，所以方便在不同进程间传递。记住我们传输的数据必须能够被序列化</li>
+</ul>
+<p>2.4.2 使用文件共享</p>
+<ul>
+<li><p>Android 基于 Linux ，使得并发读/写可以没限制的进行，甚至两个线程同时对同一个文件进行写操作都允许，但是这可能会出现问题。</p>
+</li>
+<li><p>文件共享这种方式对格式没有要求，只要双方约定好即可。文件读写适合在对数据同步要求不高的进程之间进行通信，并且要妥善解决并发读/写的问题。</p>
+</li>
+<li><p>SharedPreferences 是一个特例，虽然是通过读写 xml 实现的，但是由于系统对它的读写有缓存策略，即在内存中会有一份 SharedPreferences 文件的缓存，因此在多进程模式下，系统对它的读写就ui变得不可靠。</p>
+</li>
+</ul>
+<p>2.4.3 使用Messenger</p>
+<ul>
+<li><p>Messenger 可以翻译为信使，通过它可以在不同进程间传递 Message 对象，Message 中放入我们需要传递的数据即可。Messenger 是一种轻量级的 IPC 方案，它的底层是 AIDL. 下面是 Messenger 的两个构造方法，不管是 IMessenger 还是 Stub.asInterface ，都能表明它的底层是 AIDL.</p>
+</li>
+<li><p>Messenger 是串行处理请求而的，即它一次处理一个请求，因此我们在服务端不用考虑线程同步的问题，这是因为服务端不存在并发执行的情况。</p>
+</li>
+</ul>
+<pre><code class="Java">public Messenger(Handler target) {
+    mTarget = target.getIMessenger();
+}
+
+public Messenger(IBinder target) {
+    mTarget = IMessenger.Stub.asInterface(target);
+}</code></pre>
+<p>实现一个 Messenger 有如下几个步骤，分为服务端和客户端</p>
+<ul>
+<li><p>服务端进程： 在服务端创建一个 Service 来处理客户端的链接请求，同时创建一个 Handler 并通过它来创建一个 Messenger 对象，然后在 Service 的 onBind 中返回这个 Messenger 对象底层的 Binder 即可。</p>
+</li>
+<li><p>客户端进程：首先要绑定服务端的 Service，绑定成功后用服务端返回的 IBinder 对象创建一个 Messenger， 通过这个 Messenger 就可以像服务端发送消息了，发消息的类型为 Message 对象。如果需要<strong>服务端能回应客户端</strong>，那就和服务端一样创建一个 Handler 并创建一个新的 Messenger，<strong>并把这个 Messenger 对象通过 replyTo 参数 传递给服务端</strong>，服务端通过这个 replyTo 参数就可以回应客户端。</p>
+</li>
+</ul>
+<p><img src="http://7xjkin.com1.z0.glb.clouddn.com/7.11.4.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>2.4.4 使用AIDL</p>
+<ul>
+<li>Messenger 以串行处理进程间通信，所以在面对大量并发请求并不是很合适。同时 <strong>Messenger 的作用主要是传递消息</strong>， 很多时候我们要跨进程调用服务端的方法，这种情形 Messenger 就做不到，但是可以用 AIDL，Messenger 本质上也是 AIDL， 只是做了封装方便调用而已。</li>
+</ul>
+<p>实现 AIDL 来进行进程间通信，分为客户端和服务端两个方面</p>
+<ul>
+<li>服务端： 创建一个 Service 用来监听客户端的情趣，然后创建一个 AIDL 文件，将暴露给客户端的请求都在 AIDL 文件中声明，最后实现这个 AIDL 接口即可</li>
+<li>客户端：绑定服务端 Service，绑定成功后，将服务端返回的 Binder 对象转换成 AIDL 接口所属类型就可以调用 AIDL 中的方法了</li>
+<li>创建 AIDL 文件： 并不是所有数据类型都可以使用的，AIDL 支持下面这些数据类型<ul>
+<li>基本数据类型(int， long，char，boolean，double 等)</li>
+<li>String 和 CharSequence</li>
+<li>List： 只支持 ArrayList ，里面每个元素都必须能够被 AIDL 支持</li>
+<li>Map： 只支持 HashMap，里面每个 key , value 都必须被 AIDL 支持</li>
+<li>Parcelabe</li>
+<li>AIDL: 所有的 AIDL 接口本身也可以在 AIDL 文件中使用。</li>
+<li>AIDL 中除了基本数据类型，其他类型的参数必须表上方向： in，out 或者 inout，in 表示输入型参数，out 表示输出型参数，inout 表示输入输出型参数。不能一概的使用 out 或者 inout，因为这在底层实现是有开销的。<strong>AIDL 接口中只支持方法，不支持声明静态常量</strong></li>
+</ul>
+</li>
+<li>远程服务端 Service 的实现 ：参考 Demo 中的 <a href="https://github.com/zubinxiong/LifeWithAndroid/blob/master/art_chapter2/src/main/java/me/ewriter/art_chapter2/aidl/BookManagerService.java" target="_blank" rel="noopener">BookManagerService</a></li>
+<li>客户端的实现：参考 Demo 中的 <a href="https://github.com/zubinxiong/LifeWithAndroid/blob/master/art_chapter2/src/main/java/me/ewriter/art_chapter2/aidl/BookManagerActivity.java" target="_blank" rel="noopener">BookManagerActivity</a></li>
+</ul>
+<p>远程服务端和客户端的实现，建议结合上面的源码一起看。里面增加了关于 CopyOnWriteArrayList 和 RemoteCallbackList 相关的注释</p>
+<p>默认情况下，我们的远程服务任何人都可以连接，因此我们必须给服务加入权限验证功能。这里介绍两种常用的方法：</p>
+<ul>
+<li>第一种方法在 onBind 中验证，不同步就直接返回 null。验证的方法很多，比如使用 permission 验证。首先现在 AndroidManifest 中声明所需的权限，让后在 onBind 中做权限处理。如果自己内部的应用想要绑定我们的服务，只需要在它的 AndroidManifest 文件中使用 permission 即可</li>
+<li><pre><code class="xml">&lt;permission
+      android:name=&quot;com.ryg.chapter_2.permission.ACCESS_BOOK_SERVICE&quot;
+      android:protectionLevel=&quot;normal&quot; /&gt;
+&lt;use-permission android:name=“com.ryg.chapter_2.permission.ACCESS_BOOK_SERVICE” /&gt;</code></pre>
+</li>
+</ul>
+<pre><code class="Java">int check = checkCallingOrSelfPermission(&quot;com.ryg.chapter_2.permission.ACCESS_BOOK_SERVICE&quot;);
+if (check == PackageManager.PERMISSION_DENIED) {
+     return null;
+}</code></pre>
+<ul>
+<li><p>第二种方法在服务端的 onTransact 方法中进行权限验证，失败就返回 false。除了使用 permission 验证，还可以采用 Uid 和 Pid 来验证，通过 getCallingUid 和 getCallingPid 可以拿到客户端所属应用的 Uid 和Pid，通过这两个参数可以做一些验证，比如验证包名。</p>
+</li>
+<li><pre><code class="Java、">@Override
+public boolean onTransact(int code, Parcel data, Parcel reply, int flags) throws RemoteException {
+  int check = checkCallingOrSelfPermission(&quot;com.ryg.chapter_2.permission.ACCESS_BOOK_SERVICE&quot;);
+  Log.d(TAG, &quot;check=&quot; + check);
+  if (check == PackageManager.PERMISSION_DENIED) {
+      return false;
+  }
+
+  String packageName = null;
+  String[] packages = getPackageManager().getPackagesForUid(getCallingUid());
+  if (packages != null &amp;&amp; packages.length &gt; 0) {
+      packageName = packages[0];
+  }
+  Log.d(TAG, &quot;onTransact: &quot; + packageName);
+  if (!packageName.startsWith(&quot;com.ryg&quot;)) {
+      return false;
+  }
+  return super.onTransact(code, data, reply, flags);
+}</code></pre>
+</li>
+</ul>
+<p>2.4.5 使用ContentProvider</p>
+<ul>
+<li><p>ContentProvider 是 Android 中提供的专门用于处理不同应用见进行数据共享的方式。和 Messenger 一样，*<em>ContentProvider 的底层实现也是 Binder *</em>。实现的时候除了 CRUD 操作还有防止 SQL 注入和权限控制等。</p>
+</li>
+<li><p>实现 ContentProvider 只要继承 ContentProvider 并实现 onCreate、query、update、insert、delete 和 getType 这六个方法。getType 用来返回 Uri 请求对应的 MIME 类型，不关心这个选项的话只要返回 null 或者 <em>/</em> 即可。<strong>根据 Binder 的原理，这六个方法均运行在 ContentProvider 的进程中，除了 onCreate 由系统回调并运行在主线程里，其他五个方法均有外界回调并运行在 Binder 线程池中。</strong></p>
+</li>
+<li><p>注册 ContentProvider， 其中 android:authorities 是唯一标识，通过这个属性外部应用可以访问我们的 BookProvider，因此必须是唯一的，可以在命名的时候加上我们的包名。如果想要限制外界程序访问可以加上 android:permission 属性，也可以细分为读权限和写权限，分别对应 android:readPermission 和 android:writePermission 属性。</p>
+</li>
+<li><p>ContentProvider 通过 Uri 来区分外界要访问的数据集合，为了知道外界访问什么表，需要单独为它们定义 Uri 和 Uri_Code 。我们可以用 UriMatcher 的 addURI 方法将 Uri 和 Uri_Code 相关联。</p>
+</li>
+<li><p>query、update、insert、delete 四大方法是存在多线程并发访问的，所以方法内部要做好线程同步</p>
+</li>
+</ul>
+<p>2.4.6 使用Socket</p>
+<p>Socket 分为流式套接字和用户数据报套接字两种，分别对应于网络传输控制层中的 TCP 和 UDP 协议。使用 Socket 进行同行，需要声名下面的权限：</p>
+<pre><code class="xml">    &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;
+    &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot;/&gt;</code></pre>
+<p>具体实现可以查看 <a href="https://github.com/zubinxiong/LifeWithAndroid/tree/master/art_chapter2" target="_blank" rel="noopener">Demo</a></p>
+<hr>
+<p>2.5 Binder 连接池</p>
+<p>项目大了之后，可能 AIDL 会有很多，这时候如果新建很多 Service 会让应用看起来很中。因此我们要将所有的 AIDL 放在同一个 Service 中去管理。</p>
+<p>Binder 连接池的主要作用是将每个业务模块的 Binder 请求统一转发到远程 Service 中去执行，从而避免了重复创建 Service 的过程</p>
+<p><img src="http://7xjkin.com1.z0.glb.clouddn.com/7.11.5.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>为了模拟，我们提供了两个 AIDL 接口（ISecurityCenter 和 ICompute）来模拟上面提到的多个业务模块都要使用 AIDL 的情况，其中 ISecurityCenter 接口提供加密解密功能，具体可以查看 <a href="https://github.com/zubinxiong/LifeWithAndroid/blob/master/art_chapter2/src/main/java/me/ewriter/art_chapter2/binderpool/BinderPoolActivity.java" target="_blank" rel="noopener">BinderPoolActivity</a></p>
+<hr>
+<p>2.6 选择合适的 IPC 方式</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>优点</th>
+<th>缺点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Bundle</td>
+<td>简单易用</td>
+<td>只能传输Bundle 支持的数据类型</td>
+<td>四大组件间的进程通信</td>
+</tr>
+<tr>
+<td>文件共享</td>
+<td>简单易用</td>
+<td>不适合高并发场景，并且无法做到进程间的既是通信</td>
+<td>无并发访问的情形，交换简单的数据实用性不高的场景</td>
+</tr>
+<tr>
+<td>AIDL</td>
+<td>功能强大，支持一对多并发通信，支持实时通信</td>
+<td>使用稍复杂，需要处理好线程同步</td>
+<td>一对多通信且有 RPC 需求</td>
+</tr>
+<tr>
+<td>Messenger</td>
+<td>功能一般，支持一对多串行通信，支持实时通信</td>
+<td>不能很好处理高并发情形，不支持 RPC，数据通过 Message 进行传输，因此只能传输 Bundle 支持的数据类型</td>
+<td>低并发的一对多即时通信，无 RPC 需求，或者无须返回结果的 RPC 需求</td>
+</tr>
+<tr>
+<td>ContentProvider</td>
+<td>在数据源访问方面功能强大，支持一对多并发数据共享，可通过 Call 方法扩展其他操作</td>
+<td>可以理解为受约束的 AIDL，主要提供数据源的 CRUD 操作</td>
+<td>一对多的进程间的数据共享</td>
+</tr>
+<tr>
+<td>Socket</td>
+<td>功能强大，可以通过网络传输字节流，支持一对多并发实时通信</td>
+<td>实现细节稍微有点麻烦，不支持直接的 RPC</td>
+<td>网络数据交换</td>
+</tr>
+</tbody></table>
+<hr>
+<p><a href="https://github.com/zubinxiong/LifeWithAndroid/tree/master/art_chapter2" target="_blank" rel="noopener">Demo 地址</a></p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+              <span>
+                <i class="iconfont icon-inbox"></i>
+                
+                  <a class="hover-with-bg" href="/categories/Android">Android</a>
+                  &nbsp;
+                
+              </span>&nbsp;&nbsp;
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/Android">Android</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+      <br><br>
+      
+      
+  <script defer src="https://utteranc.es/client.js"
+          repo="zubinxiong/zubinxiong.github.io"
+          issue-term="pathname"
+  
+          label="comments"
+    
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script>
+
+
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+
+    
+  
+    <!-- 不蒜子统计PV -->
+    
+    &nbsp;<span id="busuanzi_container_site_pv"></span>总访问量 
+          <span id="busuanzi_value_site_pv"></span> 次&nbsp;
+  
+  
+    <!-- 不蒜子统计UV -->
+    
+    &nbsp;<span id="busuanzi_container_site_uv"></span>总访客数 
+            <span id="busuanzi_value_site_uv"></span> 人&nbsp;
+  
+  <br>
+
+
+
+    
+
+
+    <!-- cnzz Analytics icon -->
+    
+
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+
+  <script src="/js/lazyload.js" ></script>
+
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+
+  <script src="/lib/smoothscroll/SmoothScroll.min.js" ></script>
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+<!-- Plugins -->
+
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint  linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Android 开发艺术探索2&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script>
+    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+      function () {
+        var element = document.createElement("a");
+        $(element).attr("data-fancybox", "images");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

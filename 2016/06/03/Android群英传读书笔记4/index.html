@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="description" content="">
+  <meta name="author" content="熊">
+  <meta name="keywords" content="">
+  <title>Android 群英传读书笔记4 ~ 熊胖胖</title>
+
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
+<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
+<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
+<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+
+
+
+  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
+
+<link rel="stylesheet" href="/css/main.css"  >
+
+
+  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="熊胖胖" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 50vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>熊胖胖的博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">首页</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">归档</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">分类</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">标签</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">关于</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/atom.xml">RSS</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" false
+         style="background: url('/img/index.jpg')no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  星期五, 六月 3日 2016
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    2.6k 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      10 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h3 id="第八章"><a href="#第八章" class="headerlink" title="第八章"></a>第八章</h3><ul>
+<li>Android 的生命周期与工作模式：下面两张图介绍了Android的生命周期</li>
+</ul>
+<a id="more"></a>
+
+<p><img src="http://7xjkin.com1.z0.glb.clouddn.com/8.1.jpg" srcset="/img/loading.gif" alt=""><br><img src="http://7xjkin.com1.z0.glb.clouddn.com/8.2.jpg" srcset="/img/loading.gif" alt=""></p>
+<ul>
+<li>onSaveInstanceState  方法并不是每次Activity 离开前台都会被调用的，如果用户手动调用了finish则不会被调用。这个方法被调用的原则就是系统未经允许关闭了activity(比如内存过低等)</li>
+</ul>
+<hr>
+<ul>
+<li>Activity 调用栈管理</li>
+</ul>
+<p>standard ， singleTop， singleTask， singleInstance 四种启动模式</p>
+<ul>
+<li>standard: 标准模式，每次都会新建入栈，不管栈内是不是已经有了这个activity</li>
+<li>singleTop: 栈顶判断</li>
+<li>singleTask: 检测整个栈内是不是有这个activity，将在这个activity上的其他activity都出栈</li>
+<li>singleInstance : singleInstance模式下会将打开的Activity压入一个新建的任务栈中。例如：Task栈1中结构为：A B C，C通过Intent跳转到了D（D的启动模式为singleInstance），那么则会新建一个Task 栈2，栈1中结构依旧为A B C，栈2中结构为D，此时屏幕中显示D，之后D通过Intent跳转到D，栈2中不会压入新的D，所以2个栈中的情况没发生改变。如果D跳转到了C，那么就会根据C对应的启动模式在栈1中进行对应的操作，C如果为standard，那么D跳转到C，栈1的结构为A B C C，此时点击返回按钮，还是在C，栈1的结构变为A B C，而不会回到D。<a href="http://hujiaweibujidao.github.io/blog/2015/11/28/Android-Heros-Reading-Notes-4/" target="_blank" rel="noopener">hujiaweibujidao</a></li>
+</ul>
+<hr>
+<ul>
+<li>Intent Flag 启动模式<ul>
+<li>Intent.FLAG_ACTIVITY_NEW_TASK: 使用一个新的Task 来启动Activity，通常用在Service 中启动Activity 的场景</li>
+<li>Intent.FLAG_ACTIVITY_SINGLE_TOP:  与android:launchMode = “singleTop” 效果相同</li>
+<li>Intent.FLAG_ACTIVITY_CLEAR_TOP:   与singleTask 效果相同</li>
+<li>Intent.FLAG_ACTIVITY_NO_HISTORY:  使用这种模式启动Activity，当Activity启动其他activity后，这个activity就小时了，不会保留在栈中。例如A-B,B以这种模式启动C，C在启动D。当前栈为ABD</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>清空任务栈<ul>
+<li>clearTaskOnLaunch ，每次返回该Activity时，都将在该Activity之上把所有Activity都清除</li>
+<li>finishOnTaskLaunch：clearTaskOnLaunch作用在别的Activity身上，而finishOnTaskLaunch作用在自己身上。通过这个属性，当离开这个Activity所在的task，那么当用户再返回时，该Activity就会被finish掉。</li>
+<li>alwaysRetainTaskState：如果将Activity的这个属性设置为true，那么该Activity所在的task将不接受任何清理命令，一直保持当前task状态。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="第九章"><a href="#第九章" class="headerlink" title="第九章"></a>第九章</h3><p>1.Android 系统信息的获取</p>
+<ul>
+<li>android.os.Build 主板，Android定制商，CPU指令集等等</li>
+<li>SystemProperty OS版本，OS名称， OS 架构等等</li>
+</ul>
+<p>2.PackageManager 的使用</p>
+<ul>
+<li>ActivityInfo 封装了Mainfest 文件中的<activity/> <receiver/> 之间的所有信息，包括name，icon，label， launchmode 等</li>
+<li>ServiceInfo 封装了<service></service> 之间的信息</li>
+<li>ApplicationInfo 封装了Application 的信息，其中包含了很多Flag，例如flag_system 表示系统应用，flag_external_storage 表示安装在sd卡上的应用等等</li>
+<li>PackageInfo 包含了所有activity，service 等信息</li>
+<li>ResolveInfo 封装的是包含信息的上一级信息，所以它可以返回ActivityInfo、ServiceInfo等包含的信息，它经常用来帮助我们找到那些包含特定Intent条件的信息，如带分享功能、播放功能的应用。</li>
+<li>PackageManager 经常使用的方法: <ul>
+<li>getPackageManger、getApplicationInfo、getApplicationIcon、getInstalledApplications、getInstalledPackages、queryIntentActivities、queryIntentServices、resolveActivity、resolveService等</li>
+</ul>
+</li>
+</ul>
+<p>3.ActivityManager 的使用</p>
+<ul>
+<li>ActivityManager封装了不少对象，每个对象都保存着一些重要信息。</li>
+<li>ActivityManager.MemoryInfo：关于系统内存的信息，例如availMem(系统可用内存)、totalMem(总内存)等；</li>
+<li>Debug.MemoryInfo：该MemoryInfo主要用于统计进程下的内存信息；</li>
+<li>RunningAppProceeInfo：运行进程的信息，存储的是与进程相关的信息，例如processName、pid、uid等；</li>
+<li>RunningServiceInfo：运行服务的信息，存储的是服务进程的信息，例如activeSince(第一次被激活时间)等。</li>
+<li>packages.xml文件(位于/data/system目录下<ul>
+<li>在系统初始化的时候，PackageManager的底层实现类PackageManagerService会去扫描系统中的一些特定的目录，并解析其中的apk文件，最后把它获得的应用信息保存到packages.xml文件中，当系统中的应用安装、删除或者升级时，它也会被更新。</li>
+</ul>
+</li>
+</ul>
+<p>4.Android 安全机制</p>
+<ul>
+<li>proguard 代码混淆</li>
+<li>AndroidMainfest 文件权限声明、权限检查机制</li>
+<li>应用签名机制：数字证书</li>
+<li>Linux 内核层安全机制：Uid， 访问权限控制</li>
+<li>Android虚拟机沙箱机制： 沙箱隔离</li>
+</ul>
+<hr>
+<h3 id="第十章"><a href="#第十章" class="headerlink" title="第十章"></a>第十章</h3><p>1.布局优化：避免嵌套过多无用布局</p>
+<ul>
+<li>使用layout 标签重用布局</li>
+<li>使用ViewStub 实现View的延迟加载</li>
+<li>ViewStub 可以用setvisibility 或者 viewstub.inflate() 两种方法处理</li>
+<li>ViewStub 和View.Gone 初始的时候都不会显示，但是ViewStub 在初始的时候并不会去渲染，只有调用了上面的方法才开始渲染，View 在一开始的时候就开始渲染了。其他两者并没有太大的区别。</li>
+<li>Hierarchy Viewer <ul>
+<li>如果没有任何分支的时候说明这个View 是多余的，可以去掉。手机需要root 或者直接在模拟器上查看</li>
+</ul>
+</li>
+</ul>
+<p>2.内存优化<br>通常情况下我们所说的内存是指手机的RAM，它包括以下几部分：<br>(1)寄存器：寄存器处于CPU内部，在程序中无法控制；<br>(2)栈：存放基本数据类型和对象的引用；<br>(3)堆：存放对象和数组，有虚拟机GC来管理；<br>(4)静态存储区域(static field)：在固定的位置存放应用程序运行时一直存在的数据，Java在内存中专门划分了一个静态存储区域来管理一些特殊的数据变量，如静态的数据变量；<br>(5)常量池(constant pool)：虚拟机必须为每个被装在的类维护一个常量池，常量池就是这个类所用的常量的一个有序集合，包括直接常量（基本类型、string）和对其他类型、字段和方法的符号引用。</p>
+<p>内存优化实例：<br>Bitmap优化</p>
+<ul>
+<li>使用适当分辨率和大小的图片</li>
+<li>及时回收内存。使用完bitmap后，及时使用bitmap.recycle() 方法释放内存资源。3.0 后Bitmap 放在堆里面，由GC管理，不要在手动调用了</li>
+<li>使用图片缓存。内存缓存LRUCACHE 和 硬盘缓存 DiskLruCache </li>
+</ul>
+<p>代码优化<br>使用静态方法，它比普通方法会提高15%左右的访问速度；<br>尽量不要使用枚举，少用迭代器<br>对Cursor、Receiver、Sensor、File等对象，要非常注意对它们的创建、回收与注册、解注册；<br>使用SurfaceView来替代view进行大量的、频繁的绘图操作；<br>尽量使用视图缓存，而不是每次都执行inflate方法解析视图。</p>
+<p>3.Lint工具</p>
+<p>写完布局后，AS 右边如果有修改意见会用黄色标注</p>
+<p>4.使用Android Studio 的Memory Monitor 工具<br><img src="http://7xjkin.com1.z0.glb.clouddn.com/10.1.png" srcset="/img/loading.gif" alt=""></p>
+<p>5.使用TraceView 工具优化App性能</p>
+<p>待补充，分析TraceView 日志</p>
+<p>6.使用MAT工具分析App内存状态</p>
+<p>待补充， 内存分析工具</p>
+<hr>
+<h3 id="第十二章"><a href="#第十二章" class="headerlink" title="第十二章"></a>第十二章</h3><p>ndroid 5.x 新增特性分析</p>
+<ol>
+<li><p>Material Design 介绍</p>
+</li>
+<li><p>Material Design 主题<br>@android:style/Theme.Material<br>@android:style/Theme.Material.Light<br>@android:style/Theme.Material.Light.DarkActionBar</p>
+</li>
+<li><p>Palette</p>
+</li>
+<li><p>X 新增的Palette 让我们能够从Bitmap 中提取颜色，从而让主题能够动态适应当前页面的色调。Android 内置了几种提取色调的种类Vibrant(充满活力的),Vibrant dark(充满活力的黑), Vibrant light, Muted(柔和的), Muted dark, Muted light。 </p>
+</li>
+</ol>
+<ul>
+<li>使用前记得在build.gradle 中添加依赖compile ‘com.android.support:palette-v7:23.2.1’。</li>
+<li>可以通过传递一个Bitmap 对象给Palette， 并调用它的Palette.generate() 静态方法或者Palette.generateAsync() 方法来创建一个Palette。书上写的这两种方法已经被废弃，新的使用方法是：Palette.from(bitmap).generate(new Palette.PaletteAsyncListener())。</li>
+<li>接下来可以使用getter 方法来检索相同的色调。这写色调就是上面列出来的那些。</li>
+</ul>
+<ol start="4">
+<li><p>阴影效果<br>View增加了Z属性，对应垂直方向上的高度变化，Z由elevation和translationZ两部分组成(Z=elevation+translationZ)，它们都是5.X引入的新属性。elevation是静态的成员，translationZ可以在代码中用来实现动画效果。</p>
+</li>
+<li><p>Tint 和 Clipping<br>Tinting的使用就是配置tint和tintMode就可以了，tint通过修改图像的alpha遮罩来修改图像的颜色，从而达到重新着色的目的。<br>clipping可以改变一个view的外形，要使用它，首先需要使用ViewOutlineProvider来修改outline，然后再通过setOutlineProvider将outline作用给view。</p>
+</li>
+<li><p>RecyclerView 和 CardView<br>RecyclerView和CardView是support-v7包中新添加的组件，使用它们需要引用依赖<br>RecyclerView也具有ListView一样的item复用机制，系统在写Adapter 的时候强制要使用ViewHolder 复用，在onCreateViewHolder中绑定item中的view ，onBindViewHolder 中绑定数据和视图的关联</p>
+</li>
+<li><p>Activity 过度动画</p>
+</li>
+</ol>
+<ul>
+<li>5.0 之前提供了overridePenddingTransition(int inAnim, int outAnim)来实现的</li>
+<li>5.0 之后提供了进入，退出和共享元素3中类型。</li>
+<li>其中进入，退出包括explode(分解)。 slide(滑动)，fade(淡入淡出)； \</li>
+<li>共享元素包括changeBounds（改变目标视图的布局边界），changeClipBounds (裁剪目标视图的边界)，changeTransform(改变目标是图的缩放比例和旋转角度)， changeImageTransform（改变目标图片的大小和缩放比例）</li>
+</ul>
+<hr>
+<p>A-&gt;B<br>先看如何设置进入，退出动画</p>
+<ul>
+<li><p>只需要在startActivity（intent， ActivityOptions.makeSceneTransitionAnimation(this).toBundle()）;</p>
+</li>
+<li><p>在BActivity 中，设置getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);</p>
+</li>
+<li><p>接着在B中就可以设置进入动画getWindow().setEnterTransition(new Explode()); 或者退出动画getWindow().setExitTransition(new Slide());</p>
+</li>
+</ul>
+<hr>
+<p>接着看下如何设置共享动画</p>
+<ul>
+<li>首先在A布局中要共享的item上加上 android:transitionName=”abc” ，接着在B要共享的item 上也加上 android:transitionName=”abc”。 注意两者的名字必须要相同</li>
+<li>共享元素时按下面启动，如果有多个元素共享，需要使用Pair 配对</li>
+</ul>
+<pre><code class="Java"> // 创建单个共享元素
+       startActivity(intent,
+              ActivityOptions.makeSceneTransitionAnimation(
+                       this, view, &quot;share&quot;).toBundle());
+
+        startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(
+                        this,
+                        // 创建多个共享元素
+                        Pair.create(view, &quot;share&quot;),
+                        Pair.create(fab, &quot;fab&quot;)).toBundle());
+</code></pre>
+<hr>
+<ol start="8">
+<li>Ripple 效果</li>
+</ol>
+<ul>
+<li>//波纹有边界 android:background=”?android:attr/selectableItemBackground”</li>
+<li>//波纹无边界 android:background=”?android:attr/selectableItemBackgroundBorderless”</li>
+</ul>
+<ol start="9">
+<li><p>Circular Reveral 效果: 圆形展开动画效果</p>
+<pre><code class="Java">//  view， 动画开始x， 动画开始y， 动画开始半径， 动画结束半径
+public static Animator createCircularReveal(View view,
+     int centerX,  int centerY, float startRadius, float endRadius) {
+ return new RevealAnimator(view, centerX, centerY, startRadius, endRadius);
+}</code></pre>
+</li>
+<li><p>View state changes Animation<br>在Android 5.X中，可以使用动画来作为视图改变的效果，有两种方式来实现该动画：StateListAnimator和animated-selector。<br>StateListAnimator是将动画效果(objectAnimator)配置到原来的selector的item中来实现的<br>animated-selector是一个状态改变的动画效果selector，MD中很多控件设计用到了animated-selector，例如check-box</p>
+</li>
+<li><p>Notification<br>todo ： 待更新</p>
+</li>
+</ol>
+<hr>
+<p><a href="https://github.com/zubinxiong/AndroidHeroDemo" target="_blank" rel="noopener">GithubDemo地址</a></p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+              <span>
+                <i class="iconfont icon-inbox"></i>
+                
+                  <a class="hover-with-bg" href="/categories/Android">Android</a>
+                  &nbsp;
+                
+              </span>&nbsp;&nbsp;
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/Android">Android</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+      <br><br>
+      
+      
+  <script defer src="https://utteranc.es/client.js"
+          repo="zubinxiong/zubinxiong.github.io"
+          issue-term="pathname"
+  
+          label="comments"
+    
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script>
+
+
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+
+    
+  
+    <!-- 不蒜子统计PV -->
+    
+    &nbsp;<span id="busuanzi_container_site_pv"></span>总访问量 
+          <span id="busuanzi_value_site_pv"></span> 次&nbsp;
+  
+  
+    <!-- 不蒜子统计UV -->
+    
+    &nbsp;<span id="busuanzi_container_site_uv"></span>总访客数 
+            <span id="busuanzi_value_site_uv"></span> 人&nbsp;
+  
+  <br>
+
+
+
+    
+
+
+    <!-- cnzz Analytics icon -->
+    
+
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+
+  <script src="/js/lazyload.js" ></script>
+
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+
+  <script src="/lib/smoothscroll/SmoothScroll.min.js" ></script>
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+<!-- Plugins -->
+
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint  linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Android 群英传读书笔记4&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script>
+    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+      function () {
+        var element = document.createElement("a");
+        $(element).attr("data-fancybox", "images");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

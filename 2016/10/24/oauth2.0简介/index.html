@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="description" content="">
+  <meta name="author" content="熊">
+  <meta name="keywords" content="">
+  <title>OAuth2.0 简介 ~ 熊胖胖</title>
+
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
+<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
+<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
+<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+
+
+
+  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
+
+<link rel="stylesheet" href="/css/main.css"  >
+
+
+  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="熊胖胖" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 50vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>熊胖胖的博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">首页</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">归档</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">分类</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">标签</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">关于</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/atom.xml">RSS</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" false
+         style="background: url('/img/index.jpg')no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  星期一, 十月 24日 2016
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    1.3k 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      4 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <p>其实这篇文章是很早以前就记在为知笔记里面的，但是一直懒的重新整理，但是不久前有人在群里面问 oauth2.0 相关的问题，就想着整理一遍出来了，好了，下面开始写正文了要是发现有什么错误，欢迎在评论里面指出。</p>
+<a id="more"></a>
+
+<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p><a href="https://en.wikipedia.org/wiki/OAuth#OAuth_2.0" target="_blank" rel="noopener">OAuth2.0</a>是比较常用的一种第三方协议，比如我们在很多 APP 上面都有看到除了自家的账户还提供微博，QQ 登录这样的登录方式。像这些第三方登录都是使用的 OAuth2.0 登录的。那么为什么要用这种登录方式呢？下面我们举个例子来说明。</p>
+<hr>
+<h4 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h4><p>比如我们在使用一个第三方的 APP 的时候，有时候想偷懒不想注册新用户，想要直接用 QQ 登录节省时间，但是 QQ 不会那么傻直接把账号给第三方吧，不然账号一不小心就泄露了。这时候就是用 OAuth2.0 的时候了，QQ 只给一个 accessToken 给第三方，第三方在向 QQ 请求的时候把 token 一起传递过去，这样就避免了把账号密码给暴露，实际的操作还是在 QQ 的服务器上完成，同时 QQ 的服务器还能随时将 token 置为过期避免滥用账号保证了安全。通过这个例子基本上就可以了解 OAuth2.0 的作用的。</p>
+<hr>
+<h4 id="流程说明"><a href="#流程说明" class="headerlink" title="流程说明"></a>流程说明</h4><p>接下来我们了解下整个过程： <a href="http://www.rfcreader.com/#rfc6749_line259" target="_blank" rel="noopener">图片地址</a></p>
+<p><img src="http://7xjkin.com1.z0.glb.clouddn.com/oauth1.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>我们还是以手机上第三方以QQ登录为例：Client 就是我，右边的可以理解为 QQ 。我们的目的是登录 QQ 并获取我的 QQ 好友列表<br>A： 我做了一个 APP ，里面接入了 QQ 登录。打开 APP 点击 QQ 登录，可能跳转至 QQ 或者网页登录（没有安装 QQ ）<br>B： 登录了账号并点击了同意，向我授权了可以去申请 token 了并且返回了 code<br>C： 我在客户端里面拿上一步授权返回的 code 向 QQ 申请拿 token<br>D： QQ 检查了 code 之后发现是正常的，向我返回了 token<br>E： 拿到了 token 之后，向 QQ 发送请求获取我的 QQ 好友，记得要带上 token<br>F： QQ 获取到我们的请求后，检查 token 是否正常（是否过期，错误等），正常的情况下会返回好友列表</p>
+<p>上面的A-F基本上就是我们在OAuth登录的时候会做事情，介绍的是授权码模式模式，这种模式是最完整，流程最严密的授权模式。这一篇文章就只会介绍这种模式，其他的几种模式可以参考<a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html" target="_blank" rel="noopener">阮一峰的博客</a>。</p>
+<hr>
+<h4 id="具体数据流程"><a href="#具体数据流程" class="headerlink" title="具体数据流程"></a>具体数据流程</h4><p>下面具体在介绍下整个流程中请求包及返回的数据：</p>
+<p>一般我们 OAuth2.0 登录的时候都需要先申请账号先，当然也有可能是 client 和 server 两边都是自己。申请成功后会分配给你一个 clientId，clientSecret。同时还会要你配置一个 redirectUri 跳转 url。故名思议跳转 url 就是用来跳转会自己的 app 的，网页上就是跳转会之前的登录页面。<br>A:  传递 client_id， response_type=code（这一项是固定的值为code），redirect_uri<br>B: 一般是跳转到配置的 url 并返回 code<br>C: 拿到了 code，去请求拿 token，传 code， grant_type（值默认为authorization_code），redirect_uri，client_id，client_secret<br>D: 返回 token<br>E-F： 这部分就没什么好说了，带上token去请求即可<br>详细的可以参考<a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html" target="_blank" rel="noopener">阮一峰的博客</a>。但是在介绍 C 那步中，它并没有说要传 client_secret。尝试过后发现不传的话始终拿不到 token。同时在测试的时候 C 步骤由于使用了 https 的地址，但是网页并没有做加密导致一直返回下面下面的错误 javax.net.ssl.SSLPeerUnverifiedException: Hostname diycode.cc not verified:</p>
+<p>更新accesstoken：以diycode 为例，每次下发的token信息如下所示</p>
+<pre><code class="xml">{&quot;access_token&quot;:&quot;b37c7197df69bc5f56f4241079464588728a43d9876c9057bf98fab42da87067&quot;,&quot;token_type&quot;:&quot;bearer&quot;,&quot;expires_in&quot;:86400,&quot;refresh_token&quot;:&quot;a021d136245c566608008403cc0d3b07822ef5ec14ac71f312ee775fe4d25078&quot;,&quot;created_at&quot;:1465358312}</code></pre>
+<p>其中 expires_in 过期时间为86400s，即24h。这样的话在下次访问的嘶吼，客户端收到 token 过期，需要用 refresh token 重新申请。传递的参数可以参考下面 postman 模拟的参数</p>
+<p>如果不手动更新，过期访问的时候会返回 http status： 401 - 用户认证失败，或缺少认证信息，比如 access_token 过期，或没传，可以尝试用 refresh_token 方式获得新的 access_token。</p>
+<p><img src="http://7xjkin.com1.z0.glb.clouddn.com/oauth2.png" srcset="/img/loading.gif" alt=""></p>
+<hr>
+<h4 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h4><p>原理介绍的差不多了，写一个 demo 测试，API 是根据 diycode.cc 网站提供的，原本是打算做客户端的，但是 API 一直不是很稳定，所以就搁浅了只做了一个登录的功能，可以去我写的 demo 地址查看,如果觉得不错可以顺手 star 一个。</p>
+<p><a href="https://github.com/zubinxiong/DC4Android" target="_blank" rel="noopener">Github demo 地址</a></p>
+<hr>
+<h4 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h4><p><a href="https://futurestud.io/blog/oauth-2-on-android-with-retrofit" target="_blank" rel="noopener">https://futurestud.io/blog/oauth-2-on-android-with-retrofit</a><br><a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html</a></p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+              <span>
+                <i class="iconfont icon-inbox"></i>
+                
+                  <a class="hover-with-bg" href="/categories/%E7%BD%91%E7%BB%9C">网络</a>
+                  &nbsp;
+                
+              </span>&nbsp;&nbsp;
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/oauth2-0">oauth2.0</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+      <br><br>
+      
+      
+  <script defer src="https://utteranc.es/client.js"
+          repo="zubinxiong/zubinxiong.github.io"
+          issue-term="pathname"
+  
+          label="comments"
+    
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script>
+
+
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+
+    
+  
+    <!-- 不蒜子统计PV -->
+    
+    &nbsp;<span id="busuanzi_container_site_pv"></span>总访问量 
+          <span id="busuanzi_value_site_pv"></span> 次&nbsp;
+  
+  
+    <!-- 不蒜子统计UV -->
+    
+    &nbsp;<span id="busuanzi_container_site_uv"></span>总访客数 
+            <span id="busuanzi_value_site_uv"></span> 人&nbsp;
+  
+  <br>
+
+
+
+    
+
+
+    <!-- cnzz Analytics icon -->
+    
+
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+
+  <script src="/js/lazyload.js" ></script>
+
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+
+  <script src="/lib/smoothscroll/SmoothScroll.min.js" ></script>
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+<!-- Plugins -->
+
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint  linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "OAuth2.0 简介&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script>
+    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+      function () {
+        var element = document.createElement("a");
+        $(element).attr("data-fancybox", "images");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

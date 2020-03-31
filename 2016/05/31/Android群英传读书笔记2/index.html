@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="description" content="">
+  <meta name="author" content="熊">
+  <meta name="keywords" content="">
+  <title>Android 群英传读书笔记2 ~ 熊胖胖</title>
+
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
+<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
+<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
+<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+
+
+
+  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
+
+<link rel="stylesheet" href="/css/main.css"  >
+
+
+  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="熊胖胖" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 50vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>熊胖胖的博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">首页</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">归档</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">分类</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">标签</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">关于</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/atom.xml">RSS</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" false
+         style="background: url('/img/index.jpg')no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  星期二, 五月 31日 2016
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    3k 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      12 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h3 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h3><p>﻿1. Android 上的几种坐标</p>
+<ul>
+<li>Android 坐标系</li>
+</ul>
+<p>在Android中，将屏幕左上角的顶点为坐标系原点。<br>系统提供了getLocationOnScreen(int location[]) 这样的方法获取Android坐标系中点的位置。另外在触摸事件中使用getRawX(). getRawY() 方法获得的坐标同样是Android坐标系中的坐标</p>
+<a id="more"></a>
+<p><img src="http://7xjkin.com1.z0.glb.clouddn.com/5.1.jpg" srcset="/img/loading.gif" alt=""></p>
+<ul>
+<li>视图坐标系</li>
+</ul>
+<p>它描述的了子视图在父视图中的位置关系。不过在视图坐标系是以父视图左上角为原点</p>
+<p><img src="http://7xjkin.com1.z0.glb.clouddn.com/5.2.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="http://7xjkin.com1.z0.glb.clouddn.com/5.3.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><a href="http://www.linuxidc.com/Linux/2015-11/125391.htm" target="_blank" rel="noopener">图片地址</a></p>
+<p>2.实现滑动的7种方法</p>
+<p>2.1 layout 方法:</p>
+<ul>
+<li>View 在进行绘制时，会调用onLayout()方法设置显示的位置。同样，可以通过修改View的left，top，right，bottom四个属性来控制View的坐标.因此我们可以在每次回调onTouchEvent 的时候,来获取触摸点的坐标,然后在ACTION_DOWN中记录触摸点的坐标。然后在ACTION_MOVE中计算偏移量，并应用到layout中。</li>
+</ul>
+<p>2.2 offsetLeftAndRight(offsetX) 和 offsetTopAndBottom(offsetY)</p>
+<ul>
+<li>这个方法相当于系统对左右，上下移动的一个封装。计算出便宜量后直接使用即可，与layout效果相同</li>
+</ul>
+<p>2.3 LayoutParams</p>
+<ul>
+<li><p>LayoutParams 保存了一个View的布局参数。因此可以在程序中，通过改变LayoutParams来动态地修改一个布局的位置参数，从而达到改变View位置的效果。可以用getLayoutParams()来获取一个View的LayoutParams。计算偏移量与上面相同，获取到偏移量之后用setLayoutParams。</p>
+</li>
+<li><p>这个View 需要有父布局，不然无法获取到LayoutParams</p>
+</li>
+<li><p>在通过LayoutParams 来改变一个View的位置时，通常改变的是这个View的Margin属性，所以除了使用布局的LayoutParams之外，还可以使用ViewGroup.MarginLayoutParams 实现</p>
+</li>
+</ul>
+<p>2.4 scrollTo 与 scrollBy</p>
+<ul>
+<li><p>在一个View 中，系统提供了scrollTo和scrollBy来改变一个View的位置。scrollTo(x, y) 是移动到某一个点，scrollBy(dx, dy) 表示的是移动的增量</p>
+</li>
+<li><p>当我们在上面的代码中获得偏移量之后scrollBy(offsetX, offsetY)发现并没有移动。 因为这个方法移动的是View 的content例如textview，移动的就是它的文本。ViewGroup中用这两个方法，移动的将是所有子VIew，因此要移动的时候应该这样处理 ((View)getParent()).scrollBy(offsetX, offsetY);</p>
+</li>
+<li><p>当我们调用的时候scrollBy的时候可以理解为外面的盖子在动，所有当直接使用时view往反方向走了，所以这个地方offsetx和offsetY都应该为负即反方向, 参考下图</p>
+</li>
+</ul>
+<p><img src="http://7xjkin.com1.z0.glb.clouddn.com/5.4.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>2.5 Scroller</p>
+<ul>
+<li><p>Scroller 类与scrollTo 和 scrollBy 方法非常的类似，但是上面两个方法都是瞬时的，view 会突然的移动到某个位置， 通过Scroller 类方法可以实现平滑的移动</p>
+</li>
+<li><p>使用Scroller 类需要如下三个步骤</p>
+<ul>
+<li>初始化Scroller mScroller = new Scroller(context)</li>
+<li>重写computeScroll() 方法，实现模拟滑动</li>
+<li>startScroll 开启模拟过程, 调用startScroll(int startX, int startY, int dx, int dy)， 其实坐标和位移。在获取坐标的时候，通常可以使用view.getScrollX() 方法来获取父视图中content 所滑动到点的坐标，注意这个值的政府和scrollBy 和 scrollTo 中一样。</li>
+</ul>
+</li>
+</ul>
+<p>2.6 属性动画</p>
+<ul>
+<li>这部分内容在第7张会详细介绍，这里不过多介绍</li>
+</ul>
+<p>2.7 ViewDragHelper</p>
+<ul>
+<li><p>在自定义viewgroup中，很多效果都包含用户手指去拖动其内部的某个View（eg:侧滑菜单等）,针对具体的需要去写好onInterceptTouchEvent 和 onTouchEvent 这两个方法很不容易，需要自己去处理，包括多手指的处理、加速度检测等等。 官方在V4的支持包里面提供了ViewDragHelper 让我们方便的去自定义一个ViewGroup</p>
+</li>
+<li><p>初始化ViewDragHelper： mViewDragHelper = ViewDragHelper.create(this, callback);</p>
+</li>
+<li><p>拦截事件，将事件传递给ViewDragHelper 处理</p>
+</li>
+<li><p>处理computeScroll(), 因为ViewDragHelper 内部也是通过Scroller 来实现平滑移动的。通常情况下可以使用下面的代码</p>
+<pre><code class="Java">@Override
+  public void computeScroll() {
+      if (mViewDragHelper.continueSettling(true)) {
+          ViewCompat.postInvalidateOnAnimation(this);
+      }
+  }</code></pre>
+</li>
+<li><p>处理Callback </p>
+<ul>
+<li><p>IDE 自动帮我们重写了一个方法 tryCaptureView。 通过这个方法，可以指定在创建ViewDragHelper时，参数parentView中哪一个子View 可以移动</p>
+</li>
+<li><p>clampViewPositionVertical 和 clampViewPositionHorizontal 分别对应着垂直和水平两个方向的移动，默认是返回0表示不发生滑动，如果要实现滑动的效果，这两个方法基本上是必须要重写的</p>
+</li>
+<li><p>onViewReleased 方法，表示手指放开时的操作，内部实现也是Scoller实现，之前是监听ACTION_UP 实现的</p>
+</li>
+</ul>
+</li>
+<li><p>书上只介绍了一些简单的用法，更深入的可以参考<a href="http://blog.csdn.net/lmj623565791/article/details/46858663" target="_blank" rel="noopener">这篇文章</a>了解</p>
+</li>
+</ul>
+<hr>
+<h3 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h3><p>﻿<br>1.屏幕的尺寸信息</p>
+<table>
+<thead>
+<tr>
+<th>密度</th>
+<th>ldpi</th>
+<th>mdpi</th>
+<th>hdpi</th>
+<th>xhdpi</th>
+<th>xxhdpi</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>密度值</td>
+<td>120</td>
+<td>160</td>
+<td>240</td>
+<td>320</td>
+<td>480</td>
+</tr>
+<tr>
+<td>分辨率</td>
+<td>240x320</td>
+<td>320x480</td>
+<td>480x800</td>
+<td>720x 1280</td>
+<td>1080x1920</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Android 中使用mdpi 即密度值为160 的屏幕作为标准，在这个屏幕上1px = 1dp, 同理可以转换得出在hdpi 中1dp = 1.5px， 在xhdpi 中1dp = 2px(如果设计只出ios的图，一般这个对应着 5s 的分辨率，即2x 的图), 在xxhdpi中 1dp = 3px</li>
+</ul>
+<p>常用的一些转换公式：</p>
+<ul>
+<li>ppi =  √（长度像素数² + 宽度像素数²） / 屏幕对角线英寸数</li>
+<li>dp 已160ppi屏幕为标准，则1dp = 1px</li>
+<li>dp * ppi / 160 = px</li>
+<li>sp 是安卓的字体单位，以160PPI 屏幕为标准，当字体大小为100%时，1sp = 1px； sp * ppi /160 = px</li>
+<li>Android 上获取这些参数的方法,<a href="http://blog.csdn.net/ithomer/article/details/6688883" target="_blank" rel="noopener">参考这篇文章</a></li>
+</ul>
+<hr>
+<p>2.2D绘图基础</p>
+<ul>
+<li>系统通过Canvas 对象来提供绘图方法，包括drawPoint， drawLine，drawRect，drawVertices(多边形)，drawArc(弧)，drawCircle等。Paint 作为一个重要的元素，这里简单的列举下它的属性和相应的功能<ul>
+<li>setAntiAlias() //设置画笔锯齿效果 ；setColor() // 设置画笔颜色 ；setARGB() // 设置画笔的ARGB值</li>
+<li>setAlpha() // 设置画笔的Alpha 值； setStrokeWidth() // 空心边框的宽度；setStyle // 画笔的风格（空心实心）</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>3.Android XML 绘图</p>
+<p>这部分内容<a href="http://hujiaweibujidao.github.io/blog/2015/11/27/Android-Heros-Reading-Notes-3/" target="_blank" rel="noopener">hujiaweibujidao</a> 这篇博客写的非常清楚，而且也不是很难，我就直接copy过来了。感谢原作者的总结</p>
+<ul>
+<li>Bitmap<pre><code class="XML">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;bitmap
+  xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+  android:src=&quot;@[package:]drawable/drawable_resource&quot;
+  android:antialias=[&quot;true&quot; | &quot;false&quot;]
+  android:dither=[&quot;true&quot; | &quot;false&quot;]
+  android:filter=[&quot;true&quot; | &quot;false&quot;]
+  android:gravity=[&quot;top&quot; | &quot;bottom&quot; | &quot;left&quot; | &quot;right&quot; | &quot;center_vertical&quot; |
+                    &quot;fill_vertical&quot; | &quot;center_horizontal&quot; | &quot;fill_horizontal&quot; |
+                    &quot;center&quot; | &quot;fill&quot; | &quot;clip_vertical&quot; | &quot;clip_horizontal&quot;]
+  android:tileMode=[&quot;disabled&quot; | &quot;clamp&quot; | &quot;repeat&quot; | &quot;mirror&quot;] /&gt;</code></pre>
+</li>
+<li>Shape<pre><code class="XML">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;shape   
+  xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;   
+  android:shape=[&quot;rectangle&quot; | &quot;oval&quot; | &quot;line&quot; | &quot;ring&quot;] &gt;   
+  &lt;corners        //当shape为rectangle时使用
+      android:radius=&quot;integer&quot;        //半径值会被后面的单个半径属性覆盖，默认为1dp
+      android:topLeftRadius=&quot;integer&quot;       
+      android:topRightRadius=&quot;integer&quot;       
+      android:bottomLeftRadius=&quot;integer&quot;       
+      android:bottomRightRadius=&quot;integer&quot; /&gt;   
+  &lt;gradient       //渐变
+      android:angle=&quot;integer&quot;       
+      android:centerX=&quot;integer&quot;       
+      android:centerY=&quot;integer&quot;       
+      android:centerColor=&quot;integer&quot;       
+      android:endColor=&quot;color&quot;       
+      android:gradientRadius=&quot;integer&quot;       
+      android:startColor=&quot;color&quot;       
+      android:type=[&quot;linear&quot; | &quot;radial&quot; | &quot;sweep&quot;]       
+      android:useLevel=[&quot;true&quot; | &quot;false&quot;] /&gt;   
+  &lt;padding        //内边距
+      android:left=&quot;integer&quot;       
+      android:top=&quot;integer&quot;       
+      android:right=&quot;integer&quot;       
+      android:bottom=&quot;integer&quot; /&gt;   
+  &lt;size           //指定大小，一般用在imageview配合scaleType属性使用
+      android:width=&quot;integer&quot;       
+      android:height=&quot;integer&quot; /&gt;   
+  &lt;solid          //填充颜色
+      android:color=&quot;color&quot; /&gt;   
+     &lt;stroke         //边框
+        android:width=&quot;integer&quot;       
+      android:color=&quot;color&quot;       
+      android:dashWidth=&quot;integer&quot;       
+      android:dashGap=&quot;integer&quot; /&gt;
+&lt;/shape&gt;</code></pre>
+</li>
+<li>Layer:Layer在XML中定义Layer的语法，layer类似PS中图层的概念<pre><code class="XML">&lt;layer-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+  &lt;item android:drawable=&quot;@[package:]drawable/drawable_resource&quot; /&gt;
+  &lt;item android:drawable=&quot;@[package:]drawable/drawable_resource&quot; /&gt;
+  ......
+&lt;/layer-list&gt;</code></pre>
+</li>
+<li>Selector<pre><code class="XML">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+  &lt;!-- 默认时的背景图片--&gt;
+  &lt;item android:drawable=&quot;@drawable/pic1&quot;/&gt;
+  &lt;!-- 没有焦点时的背景图片 --&gt;
+  &lt;item android:drawable=&quot;@drawable/pic1&quot; android:state_window_focused=&quot;false&quot;/&gt;
+  &lt;!-- 非触摸模式下获得焦点并单击时的背景图片 --&gt;
+  &lt;item android:drawable=&quot;@drawable/pic2&quot; android:state_focused=&quot;true&quot; android:state_pressed=&quot;true&quot;/&gt;
+  &lt;!-- 触摸模式下单击时的背景图片--&gt;
+  &lt;item android:drawable=&quot;@drawable/pic3&quot; android:state_focused=&quot;false&quot; android:state_pressed=&quot;true&quot;/&gt;
+  &lt;!--选中时的图片背景--&gt;
+  &lt;item android:drawable=&quot;@drawable/pic4&quot; android:state_selected=&quot;true&quot;/&gt;
+  &lt;!--获得焦点时的图片背景--&gt;
+  &lt;item android:drawable=&quot;@drawable/pic5&quot; android:state_focused=&quot;true&quot;/&gt;
+&lt;/selector&gt;</code></pre>
+</li>
+</ul>
+<hr>
+<p>4.Android 绘图技巧</p>
+<p>4.1 Canvas</p>
+<ul>
+<li><p>canvas.save()  保存之前已绘制的图形，之后的绘制在另一个图层上进行</p>
+</li>
+<li><p>canvas.restore()  可以类似PS 中的合并图层来理解，将我们在save之后和之前的图层合并</p>
+</li>
+<li><p>canvas.translate() 平移，调用后将原点从(0,0)移动到了(x,y) 之后的操作都是以x,y 为原点操作</p>
+</li>
+<li><p>canvas.rotate() 翻转, 和上面的平移效果类似，这个效果可以参考demo中<a href="https://github.com/zubinxiong/AndroidHeroDemo/blob/master/chapter6/src/main/java/me/ewriter/chapter6/clock/Clock.java" target="_blank" rel="noopener">Clock类</a>加深理解</p>
+</li>
+</ul>
+<p>4.2 Layer图层</p>
+<ul>
+<li>Android 通过saveLayer() 方法， saveLayerAlpha() 方法将一个图层入栈，使用restore() 方法，restoreToCount 方法将一个图层出栈。 入栈的时候，后面的所有操作都发生在这个图层上，出栈的时候，则会把图像绘制到上层Canvas 上。详细的可以参考<a href="http://www.cnblogs.com/liangstudyhome/p/4143498.html" target="_blank" rel="noopener">这篇文章</a></li>
+</ul>
+<p>5.色彩特效处理</p>
+<ul>
+<li>主要是矩阵等处理，这部分内容稍后补充</li>
+</ul>
+<p>6.Android图像处理，画笔特效</p>
+<p>6.1 PorterDuffXfermode</p>
+<ul>
+<li><p>图片列举了16 中 PorterDuffXfermode， 这个效果类似于集合的交集并集，PorterDuffXfermode 设置的是两个图层交集部分如何显示，dst 是先画的图层，src 是后画的图层</p>
+</li>
+<li><p>其中最常用的是DstIn 和 SrcIn 将矩形图片切成圆角矩形</p>
+</li>
+<li><p>实现一个圆角图片，先用一个普通画笔画一个Mask 遮罩层，再用带PorterDuffXfermode 的画笔将图像画在遮罩层上，这样就可以实现圆角的图片了。 书中还有另外一个刮刮卡的例子，我在代码上面新增了注释，比较直观可以直接看代码理解。<a href="https://github.com/zubinxiong/AndroidHeroDemo/blob/master/chapter6/src/main/java/me/ewriter/chapter6/xfermode/RoundRectXfermodeView.java" target="_blank" rel="noopener">RoundRectXfermodeView</a>， <a href="https://github.com/zubinxiong/AndroidHeroDemo/blob/master/chapter6/src/main/java/me/ewriter/chapter6/xfermode/XfermodeView.java" target="_blank" rel="noopener">XfermodeView</a></p>
+</li>
+</ul>
+<p><img src="http://7xjkin.com1.z0.glb.clouddn.com/6.1.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>6.2 Shader着色器</p>
+<ul>
+<li>LinearGradient 线性Shader</li>
+<li>RadialGradient 光束</li>
+<li>SweepGradient 梯度</li>
+<li>ComposeShader 混合</li>
+<li>BimapShader 位图</li>
+</ul>
+<p>6.3 PathEffect</p>
+<ul>
+<li>暂时没用过这部分功能，详细的笔记稍后补充</li>
+</ul>
+<p>6.4 SurfaceView </p>
+<ul>
+<li><p>View 通过刷新来重绘视图的，Android系统通过VSYNC 信号来进行屏幕的重绘，刷新间隔为16ms，如果操作的逻辑太多，比如游戏界面需要频繁刷新就会阻塞主线程造成卡顿</p>
+</li>
+<li><p>SurfaceView 和 View 的区别</p>
+<ul>
+<li>View 主要用在主动更新的状况下，而 SurfaceView 主要适用于被动更新，例如频繁的刷新</li>
+<li>View 在主线程中对画面进行刷新，而 SurfaceView 通常会通过一个子线程来进行页面刷新</li>
+<li>View 在绘图时并没有使用双缓冲机制，而 SurfaceView 在底层实现机制中就已经实现了双缓冲机制</li>
+</ul>
+</li>
+<li><p>SurfaceView 的使用</p>
+<ul>
+<li>创建自定义的SurfaceView 继承自 SurfaceView， 并实现两个接口 SurfaceHolder.Callback 和 Runnable</li>
+<li>初始化 SurfaceView， 自定义的 SurfaceView 通常有下面三个变量， 初始化方法见下方</li>
+</ul>
+</li>
+<li><p>通过lockCanvas方法获取Canvas对象进行绘制，并通过unlockCanvasAndPost方法对画布内容进行提交。每次调用<strong>lockCanvas</strong>拿到的Canvas都是同一个Canvas对象，所以之前的操作都会保留，如果需要擦除，可以在绘制之前调用drawColor方法来进行清屏。注意<strong>mHolder.unlockCanvasAndPost(mCanvas)</strong> 方法放到finally 中，保证每次的内容都被提交。</p>
+</li>
+</ul>
+<pre><code class="Java">private SurfaceHolder mHolder;
+// 用于绘图的Canvas
+private Canvas mCanvas;
+// 子线程标志位
+private boolean mIsDrawing;
+
+private void initview() {
+    mHolder = getHolder();
+    mHolder.addCallback(this);
+    // 初始化Surfaceholder 并注册SurfaceHolder 的回调事件
+}</code></pre>
+<hr>
+<p><a href="https://github.com/zubinxiong/AndroidHeroDemo" target="_blank" rel="noopener">GithubDemo地址</a></p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+              <span>
+                <i class="iconfont icon-inbox"></i>
+                
+                  <a class="hover-with-bg" href="/categories/Android">Android</a>
+                  &nbsp;
+                
+              </span>&nbsp;&nbsp;
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/Android">Android</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+      <br><br>
+      
+      
+  <script defer src="https://utteranc.es/client.js"
+          repo="zubinxiong/zubinxiong.github.io"
+          issue-term="pathname"
+  
+          label="comments"
+    
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script>
+
+
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+
+    
+  
+    <!-- 不蒜子统计PV -->
+    
+    &nbsp;<span id="busuanzi_container_site_pv"></span>总访问量 
+          <span id="busuanzi_value_site_pv"></span> 次&nbsp;
+  
+  
+    <!-- 不蒜子统计UV -->
+    
+    &nbsp;<span id="busuanzi_container_site_uv"></span>总访客数 
+            <span id="busuanzi_value_site_uv"></span> 人&nbsp;
+  
+  <br>
+
+
+
+    
+
+
+    <!-- cnzz Analytics icon -->
+    
+
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+
+  <script src="/js/lazyload.js" ></script>
+
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+
+  <script src="/lib/smoothscroll/SmoothScroll.min.js" ></script>
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+<!-- Plugins -->
+
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint  linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Android 群英传读书笔记2&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script>
+    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+      function () {
+        var element = document.createElement("a");
+        $(element).attr("data-fancybox", "images");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
